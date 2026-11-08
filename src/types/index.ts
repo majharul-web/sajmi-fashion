@@ -1,10 +1,10 @@
-export type Category = 'All' | 'Clothing' | 'Electronics' | 'Home' | 'Cosmetics' | 'Groceries';
+export type Category = 'All' | 'Men' | 'Women' | 'Kids' | 'Traditional' | 'Accessories';
 
 export interface Product {
   id: number;
   nameBn: string;
   nameEn: string;
-  category: 'Clothing' | 'Electronics' | 'Home' | 'Cosmetics' | 'Groceries';
+  category: 'Men' | 'Women' | 'Kids' | 'Traditional' | 'Accessories';
   price: number;
   originalPrice: number;
   icon: string;
@@ -14,4 +14,3 @@ export interface Product {
 
 export type Language = 'bn' | 'en';
 export type Theme = 'light' | 'dark';
-

@@ -1,0 +1,2337 @@
+<!doctype html>
+<html lang="bn" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SajMi Store | সাজমি স্টোর – টুপির হাট, নবাবগঞ্জ, দিনাজপুর</title>
+    <meta
+      name="description"
+      content="SajMi Store - Quality shopping onsite at Tupir Hat and via Facebook & WhatsApp. Owned by Md Majharul Islam."
+    />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <!-- Google Fonts: Inter & Hind Siliguri (for crisp Bengali typography) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                50: "#fff7ed",
+                100: "#ffedd5",
+                200: "#fed7aa",
+                300: "#fdba74",
+                400: "#fb923c",
+                500: "#f97316",
+                600: "#ea580c",
+                700: "#c2410c",
+                800: "#9a3412",
+                900: "#7c2d12",
+              },
+            },
+            fontFamily: {
+              sans: ["Hind Siliguri", "Inter", "system-ui", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      /* Multipage SPA Transitions */
+      .page-section {
+        display: none;
+        opacity: 0;
+        transition: opacity 0.25s ease-in-out;
+      }
+      .page-section.active {
+        display: block;
+        opacity: 1;
+      }
+
+      .nav-btn.active {
+        color: #ea580c;
+        font-weight: 700;
+        position: relative;
+      }
+      .nav-btn.active::after {
+        content: "";
+        position: absolute;
+        bottom: -6px;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: #ea580c;
+        border-radius: 9999px;
+      }
+
+      /* Floating WhatsApp Pulse */
+      @keyframes floating-pulse {
+        0%,
+        100% {
+          transform: scale(1);
+          box-shadow: 0 10px 25px -5px rgba(34, 197, 94, 0.5);
+        }
+        50% {
+          transform: scale(1.06);
+          box-shadow: 0 20px 30px -5px rgba(34, 197, 94, 0.7);
+        }
+      }
+      .pulse-float {
+        animation: floating-pulse 2.2s infinite ease-in-out;
+      }
+    </style>
+  </head>
+
+  <body
+    class="bg-gray-50 text-gray-900 dark:bg-slate-950 dark:text-gray-100 transition-colors duration-300 font-sans flex flex-col min-h-screen"
+  >
+    <!-- ================= TOP NOTICE BAR ================= -->
+    <div
+      class="bg-gradient-to-r from-brand-600 via-orange-600 to-amber-600 text-white text-xs sm:text-sm py-2 px-4 font-medium shadow-inner"
+    >
+      <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
+        <div class="flex items-center gap-2">
+          <span
+            class="bg-white/20 px-2 py-0.5 rounded text-[11px] font-bold uppercase tracking-wider"
+            data-i18n="top_badge"
+            >স্টার্টআপ পর্যায়</span
+          >
+          <span data-i18n="top_address"
+            >📍 টুপির হাট, নবাবগঞ্জ, দিনাজপুর | সরাসরি দোকান ও সোশ্যাল মিডিয়া অর্ডার</span
+          >
+        </div>
+        <div class="flex items-center gap-4 text-xs">
+          <span class="hidden sm:inline text-white/80" data-i18n="top_future"
+            ><i class="fas fa-rocket mr-1"></i> ভবিষ্যতে সম্পূর্ণ অনলাইন শপে রূপান্তর হবে</span
+          >
+          <a href="tel:01747615357" class="hover:underline font-bold flex items-center gap-1">
+            <i class="fas fa-phone-alt"></i> 01747615357
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= NAVBAR ================= -->
+    <header
+      class="sticky top-0 z-40 bg-white/90 dark:bg-slate-900/95 backdrop-blur-md border-b border-gray-200 dark:border-slate-800 shadow-sm transition-colors"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-18 py-3">
+          <!-- Brand Logo -->
+          <a href="#home" onclick="navigateTo('home')" class="flex items-center gap-3 group">
+            <div
+              class="w-11 h-11 bg-gradient-to-tr from-brand-600 to-amber-500 rounded-2xl flex items-center justify-center text-white shadow-md shadow-brand-500/20 group-hover:scale-105 transition-transform"
+            >
+              <span class="font-black text-2xl tracking-tighter">S</span>
+            </div>
+            <div>
+              <div class="flex items-center gap-1.5">
+                <span class="text-2xl font-black tracking-tight text-gray-900 dark:text-white">SajMi</span>
+                <span
+                  class="text-2xl font-black tracking-tight text-brand-600 dark:text-brand-500"
+                  data-i18n="brand_suffix"
+                  >স্টোর</span
+                >
+              </div>
+              <p class="text-[11px] text-gray-500 dark:text-gray-400 font-medium -mt-1" data-i18n="brand_sub">
+                টুপির হাট, নবাবগঞ্জ
+              </p>
+            </div>
+          </a>
+
+          <!-- Desktop Navigation (Multipage) -->
+          <nav
+            class="hidden md:flex items-center gap-7 text-sm font-semibold text-gray-700 dark:text-gray-200"
+          >
+            <a
+              href="#home"
+              onclick="navigateTo('home')"
+              id="nav-home"
+              class="nav-btn transition-colors hover:text-brand-600 dark:hover:text-brand-400"
+              data-i18n="nav_home"
+              >হোম</a
+            >
+            <a
+              href="#products"
+              onclick="navigateTo('products')"
+              id="nav-products"
+              class="nav-btn transition-colors hover:text-brand-600 dark:hover:text-brand-400"
+              data-i18n="nav_products"
+              >পণ্য তালিকা</a
+            >
+            <a
+              href="#how-to-order"
+              onclick="navigateTo('how-to-order')"
+              id="nav-how-to-order"
+              class="nav-btn transition-colors hover:text-brand-600 dark:hover:text-brand-400"
+              data-i18n="nav_how"
+              >অর্ডার পদ্ধতি</a
+            >
+            <a
+              href="#about"
+              onclick="navigateTo('about')"
+              id="nav-about"
+              class="nav-btn transition-colors hover:text-brand-600 dark:hover:text-brand-400"
+              data-i18n="nav_about"
+              >আমাদের সম্পর্কে</a
+            >
+            <a
+              href="#contact"
+              onclick="navigateTo('contact')"
+              id="nav-contact"
+              class="nav-btn transition-colors hover:text-brand-600 dark:hover:text-brand-400"
+              data-i18n="nav_contact"
+              >যোগাযোগ ও ঠিকানা</a
+            >
+          </nav>
+
+          <!-- Right Side: Bangla/English Toggle, Dark Mode & Order Button -->
+          <div class="flex items-center gap-2 sm:gap-3">
+            <!-- BANGLA / ENGLISH LANGUAGE SWITCHER BUTTON -->
+            <button
+              id="langToggleBtn"
+              onclick="toggleLanguage()"
+              class="px-3 py-1.5 rounded-xl border border-gray-200 dark:border-slate-700 bg-gray-100 hover:bg-gray-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-xs font-bold text-brand-600 dark:text-brand-400 flex items-center gap-1.5 transition-all shadow-sm"
+            >
+              <i class="fas fa-language text-sm"></i>
+              <span id="langLabel">English</span>
+            </button>
+
+            <!-- Dark Mode Toggle Button -->
+            <button
+              id="themeToggleBtn"
+              onclick="toggleTheme()"
+              aria-label="Toggle Dark Mode"
+              class="p-2.5 rounded-xl bg-gray-100 hover:bg-gray-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-gray-600 dark:text-amber-400 transition-all shadow-sm"
+            >
+              <i id="themeIcon" class="fas fa-moon text-base"></i>
+            </button>
+
+            <!-- WhatsApp Direct Order CTA Button -->
+            <a
+              href="https://wa.me/8801747615357?text=হ্যালো%20মাজহারুল%20ভাই%2C%20আমি%20সাজমি%20স্টোর%20থেকে%20অর্ডার%20করতে%20চাই"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="hidden sm:inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold px-3.5 py-2.5 rounded-xl shadow-md shadow-emerald-600/20 transition-all hover:-translate-y-0.5"
+            >
+              <i class="fab fa-whatsapp text-sm"></i>
+              <span data-i18n="btn_wa_order">হোয়াটসঅ্যাপ অর্ডার</span>
+            </a>
+
+            <!-- Mobile Hamburger -->
+            <button
+              onclick="toggleMobileMenu()"
+              aria-label="Open Navigation Menu"
+              class="md:hidden p-2 rounded-lg text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-slate-800"
+            >
+              <i id="menuIcon" class="fas fa-bars text-xl"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Slide Menu -->
+      <div
+        id="mobileMenu"
+        class="hidden md:hidden border-t border-gray-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-4 pt-3 pb-5 space-y-2"
+      >
+        <a
+          href="#home"
+          onclick="
+            navigateTo('home');
+            toggleMobileMenu();
+          "
+          class="block px-3 py-2.5 rounded-lg text-base font-semibold hover:bg-brand-50 dark:hover:bg-slate-800 text-gray-800 dark:text-gray-200"
+        >
+          <i class="fas fa-home w-6 text-brand-500"></i> <span data-i18n="nav_home">হোম</span>
+        </a>
+        <a
+          href="#products"
+          onclick="
+            navigateTo('products');
+            toggleMobileMenu();
+          "
+          class="block px-3 py-2.5 rounded-lg text-base font-semibold hover:bg-brand-50 dark:hover:bg-slate-800 text-gray-800 dark:text-gray-200"
+        >
+          <i class="fas fa-store w-6 text-brand-500"></i> <span data-i18n="nav_products">পণ্য তালিকা</span>
+        </a>
+        <a
+          href="#how-to-order"
+          onclick="
+            navigateTo('how-to-order');
+            toggleMobileMenu();
+          "
+          class="block px-3 py-2.5 rounded-lg text-base font-semibold hover:bg-brand-50 dark:hover:bg-slate-800 text-gray-800 dark:text-gray-200"
+        >
+          <i class="fas fa-shopping-bag w-6 text-brand-500"></i>
+          <span data-i18n="nav_how">অর্ডার পদ্ধতি</span>
+        </a>
+        <a
+          href="#about"
+          onclick="
+            navigateTo('about');
+            toggleMobileMenu();
+          "
+          class="block px-3 py-2.5 rounded-lg text-base font-semibold hover:bg-brand-50 dark:hover:bg-slate-800 text-gray-800 dark:text-gray-200"
+        >
+          <i class="fas fa-user-circle w-6 text-brand-500"></i>
+          <span data-i18n="nav_about">আমাদের সম্পর্কে</span>
+        </a>
+        <a
+          href="#contact"
+          onclick="
+            navigateTo('contact');
+            toggleMobileMenu();
+          "
+          class="block px-3 py-2.5 rounded-lg text-base font-semibold hover:bg-brand-50 dark:hover:bg-slate-800 text-gray-800 dark:text-gray-200"
+        >
+          <i class="fas fa-map-marker-alt w-6 text-brand-500"></i>
+          <span data-i18n="nav_contact">যোগাযোগ ও ঠিকানা</span>
+        </a>
+
+        <!-- Quick Action on Mobile -->
+        <div class="pt-3 border-t border-gray-200 dark:border-slate-800 grid grid-cols-2 gap-2">
+          <a
+            href="https://wa.me/8801747615357"
+            target="_blank"
+            class="flex items-center justify-center gap-2 bg-emerald-600 text-white text-xs font-bold py-2.5 rounded-lg"
+          >
+            <i class="fab fa-whatsapp"></i> WhatsApp
+          </a>
+          <a
+            href="https://www.facebook.com/profile.php?id=100088521138103"
+            target="_blank"
+            class="flex items-center justify-center gap-2 bg-blue-600 text-white text-xs font-bold py-2.5 rounded-lg"
+          >
+            <i class="fab fa-facebook-f"></i> Facebook
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- ================= MAIN CONTENT AREA (PAGES) ================= -->
+    <main class="flex-grow">
+      <!-- ================= PAGE 1: HOME ================= -->
+      <section id="page-home" class="page-section active">
+        <!-- Hero Section -->
+        <div
+          class="relative overflow-hidden bg-gradient-to-b from-brand-50 via-white to-gray-50 dark:from-slate-900 dark:via-slate-900/60 dark:to-slate-950 py-16 sm:py-24"
+        >
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+              <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                <div
+                  class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-100 dark:bg-brand-950/80 border border-brand-200 dark:border-brand-800 text-brand-700 dark:text-brand-300 text-xs font-bold"
+                >
+                  <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
+                  <span data-i18n="hero_badge">টুপির হাট, নবাবগঞ্জ এর নির্ভরযোগ্য শপ</span>
+                </div>
+
+                <h1
+                  class="text-3xl sm:text-5xl lg:text-6xl font-black text-gray-900 dark:text-white tracking-tight leading-tight"
+                >
+                  <span data-i18n="hero_title_1">সেরা মানের পণ্য</span> <br class="hidden sm:inline" />
+                  <span
+                    class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-amber-500"
+                    data-i18n="hero_title_2"
+                    >ন্যায্য ও সাশ্রয়ী মূল্যে</span
+                  >
+                </h1>
+
+                <p
+                  class="text-base sm:text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed"
+                  data-i18n="hero_desc"
+                >
+                  <strong>সাজমি স্টোর</strong>-এ আপনাকে স্বাগতম! প্রতিষ্ঠাতা
+                  <strong>মোঃ মাজহারুল ইসলাম</strong>। টুপির হাটে আমাদের নিজস্ব দোকানে সরাসরি এসে কেনাকাটা
+                  করুন অথবা ফেসবুক, হোয়াটসঅ্যাপ এবং ফোনের মাধ্যমে সরাসরি অর্ডার করুন।
+                </p>
+
+                <!-- Order Channels Alert Notice -->
+                <div
+                  class="p-4 rounded-2xl bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800/60 text-amber-900 dark:text-amber-200 text-sm flex items-start gap-3"
+                >
+                  <i class="fas fa-info-circle text-amber-600 text-lg mt-0.5"></i>
+                  <div>
+                    <span class="font-bold" data-i18n="hero_notice_title"
+                      >অনলাইন পেমেন্ট বা কার্টের কোনো জটিলতা নেই:</span
+                    >
+                    <p class="text-xs sm:text-sm mt-0.5 opacity-90" data-i18n="hero_notice_desc">
+                      পছন্দের পণ্য বেছে নিয়ে সরাসরি আমাদের ফেসবুক পেজ বা হোয়াটসঅ্যাপে মেসেজ দিন। আমরা দ্রুত
+                      অর্ডার কনফার্ম করব!
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3 pt-2">
+                  <a
+                    href="#products"
+                    onclick="navigateTo('products')"
+                    class="px-6 py-3.5 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-bold text-sm shadow-lg shadow-brand-500/25 transition-all hover:-translate-y-0.5 flex items-center gap-2"
+                  >
+                    <i class="fas fa-th-large"></i>
+                    <span data-i18n="btn_browse_products">পণ্যসমূহ দেখুন</span>
+                  </a>
+                  <a
+                    href="https://wa.me/8801747615357?text=হ্যালো%20মাজহারুল%20ভাই%2C%20আমি%20সাজমি%20স্টোর%20সম্পর্কে%20জানতে%20চাই"
+                    target="_blank"
+                    class="px-6 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm shadow-lg shadow-emerald-600/20 transition-all hover:-translate-y-0.5 flex items-center gap-2"
+                  >
+                    <i class="fab fa-whatsapp text-lg"></i> <span>01747615357 (WhatsApp)</span>
+                  </a>
+                  <a
+                    href="https://www.facebook.com/profile.php?id=100088521138103"
+                    target="_blank"
+                    class="px-5 py-3.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-sm shadow-lg shadow-blue-600/20 transition-all hover:-translate-y-0.5 flex items-center gap-2"
+                  >
+                    <i class="fab fa-facebook"></i> <span data-i18n="btn_fb_page">ফেসবুক পেজ</span>
+                  </a>
+                </div>
+
+                <!-- Quick Highlights -->
+                <div
+                  class="pt-4 border-t border-gray-200 dark:border-slate-800 grid grid-cols-3 gap-4 text-center sm:text-left"
+                >
+                  <div>
+                    <p class="text-2xl font-black text-gray-900 dark:text-white">১০০%</p>
+                    <p class="text-xs text-gray-500 dark:text-gray-400" data-i18n="stat_1">সঠিক পণ্য</p>
+                  </div>
+                  <div>
+                    <p class="text-2xl font-black text-gray-900 dark:text-white" data-i18n="stat_2_title">
+                      সরাসরি
+                    </p>
+                    <p class="text-xs text-gray-500 dark:text-gray-400" data-i18n="stat_2">
+                      মালিকের সাথে কথা
+                    </p>
+                  </div>
+                  <div>
+                    <p class="text-2xl font-black text-gray-900 dark:text-white">Next.js</p>
+                    <p class="text-xs text-gray-500 dark:text-gray-400" data-i18n="stat_3">
+                      ভবিষ্যৎ প্ল্যাটফর্ম
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Right Hero Card / Owner & Store Snapshot -->
+              <div class="lg:col-span-5">
+                <div
+                  class="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 shadow-xl border border-gray-100 dark:border-slate-800 relative overflow-hidden"
+                >
+                  <div
+                    class="absolute -top-12 -right-12 w-36 h-36 bg-brand-500/10 rounded-full blur-2xl"
+                  ></div>
+
+                  <div class="flex items-center gap-4 pb-6 border-b border-gray-100 dark:border-slate-800">
+                    <div
+                      class="w-16 h-16 rounded-2xl bg-gradient-to-tr from-brand-600 to-amber-500 text-white flex items-center justify-center text-2xl font-bold shadow-md"
+                    >
+                      <i class="fas fa-store"></i>
+                    </div>
+                    <div>
+                      <h3 class="text-lg font-bold text-gray-900 dark:text-white">
+                        SajMi Store (সাজমি স্টোর)
+                      </h3>
+                      <p
+                        class="text-xs text-brand-600 dark:text-brand-400 font-semibold"
+                        data-i18n="owner_title"
+                      >
+                        প্রোপাইটর: মোঃ মাজহারুল ইসলাম
+                      </p>
+                      <p class="text-xs text-gray-500 dark:text-gray-400" data-i18n="owner_address">
+                        টুপির হাট, নবাবগঞ্জ, দিনাজপুর
+                      </p>
+                    </div>
+                  </div>
+
+                  <!-- 3 Instant Ordering Methods -->
+                  <div class="mt-6 space-y-3">
+                    <p
+                      class="text-xs font-bold uppercase tracking-wider text-gray-400"
+                      data-i18n="how_order_fast"
+                    >
+                      সহজ অর্ডার মাধ্যমসমূহ:
+                    </p>
+
+                    <a
+                      href="https://wa.me/8801747615357?text=হ্যালো%20মাজহারুল%20ভাই%2C%20আমি%20সাজমি%20স্টোর%20থেকে%20অর্ডার%20করতে%20চাই"
+                      target="_blank"
+                      class="flex items-center justify-between p-3.5 rounded-xl bg-emerald-50 dark:bg-emerald-950/30 border border-emerald-200 dark:border-emerald-800/60 hover:scale-[1.02] transition-transform"
+                    >
+                      <div class="flex items-center gap-3">
+                        <div
+                          class="w-9 h-9 rounded-lg bg-emerald-600 text-white flex items-center justify-center"
+                        >
+                          <i class="fab fa-whatsapp text-lg"></i>
+                        </div>
+                        <div>
+                          <p
+                            class="text-xs font-bold text-gray-900 dark:text-white"
+                            data-i18n="channel_wa_title"
+                          >
+                            হোয়াটসঅ্যাপ চ্যাট
+                          </p>
+                          <p class="text-[11px] text-gray-500 dark:text-gray-400">01747615357 (যেকোনো সময়)</p>
+                        </div>
+                      </div>
+                      <span class="text-xs font-bold text-emerald-600 dark:text-emerald-400"
+                        ><i class="fas fa-arrow-right"></i
+                      ></span>
+                    </a>
+
+                    <a
+                      href="https://www.facebook.com/profile.php?id=100088521138103"
+                      target="_blank"
+                      class="flex items-center justify-between p-3.5 rounded-xl bg-blue-50 dark:bg-blue-950/30 border border-blue-200 dark:border-blue-800/60 hover:scale-[1.02] transition-transform"
+                    >
+                      <div class="flex items-center gap-3">
+                        <div
+                          class="w-9 h-9 rounded-lg bg-blue-600 text-white flex items-center justify-center"
+                        >
+                          <i class="fab fa-facebook-messenger text-lg"></i>
+                        </div>
+                        <div>
+                          <p
+                            class="text-xs font-bold text-gray-900 dark:text-white"
+                            data-i18n="channel_fb_title"
+                          >
+                            ফেসবুক পেজ ইনবক্স
+                          </p>
+                          <p class="text-[11px] text-gray-500 dark:text-gray-400" data-i18n="channel_fb_sub">
+                            পণ্যের স্ক্রিনশট পাঠিয়ে দিন
+                          </p>
+                        </div>
+                      </div>
+                      <span class="text-xs font-bold text-blue-600 dark:text-blue-400"
+                        ><i class="fas fa-arrow-right"></i
+                      ></span>
+                    </a>
+
+                    <a
+                      href="tel:01747615357"
+                      class="flex items-center justify-between p-3.5 rounded-xl bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800/60 hover:scale-[1.02] transition-transform"
+                    >
+                      <div class="flex items-center gap-3">
+                        <div
+                          class="w-9 h-9 rounded-lg bg-brand-600 text-white flex items-center justify-center"
+                        >
+                          <i class="fas fa-phone-alt text-sm"></i>
+                        </div>
+                        <div>
+                          <p
+                            class="text-xs font-bold text-gray-900 dark:text-white"
+                            data-i18n="channel_phone_title"
+                          >
+                            সরাসরি ফোন কল
+                          </p>
+                          <p class="text-[11px] text-gray-500 dark:text-gray-400">
+                            01747615357 (মালিকের সাথে কথা বলুন)
+                          </p>
+                        </div>
+                      </div>
+                      <span class="text-xs font-bold text-brand-600 dark:text-brand-400"
+                        ><i class="fas fa-phone"></i
+                      ></span>
+                    </a>
+                  </div>
+
+                  <div class="mt-6 pt-4 border-t border-gray-100 dark:border-slate-800 text-center">
+                    <p class="text-xs text-gray-500 dark:text-gray-400" data-i18n="onsite_visit">
+                      <i class="fas fa-map-pin text-brand-500 mr-1"></i> সরাসরি দোকানে আসুন:
+                      <strong>টুপির হাট বাজার, নবাবগঞ্জ, দিনাজপুর</strong>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Categories Overview -->
+        <div class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center max-w-2xl mx-auto mb-12">
+            <h2
+              class="text-xs font-bold tracking-widest uppercase text-brand-600 dark:text-brand-400 mb-1"
+              data-i18n="sec_cat_tag"
+            >
+              বিভাগসমূহ
+            </h2>
+            <p class="text-3xl font-black text-gray-900 dark:text-white" data-i18n="sec_cat_title">
+              জনপ্রিয় পণ্য ক্যাটাগরি
+            </p>
+            <p class="text-sm text-gray-500 dark:text-gray-400 mt-2" data-i18n="sec_cat_desc">
+              পছন্দের ক্যাটাগরি বেছে নিন এবং সরাসরি অর্ডার করুন।
+            </p>
+          </div>
+
+          <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+            <button
+              onclick="setCategoryAndGo('Clothing')"
+              class="group p-5 bg-white dark:bg-slate-900 rounded-2xl border border-gray-100 dark:border-slate-800 hover:border-brand-500 dark:hover:border-brand-500 shadow-sm hover:shadow-md transition-all text-center"
+            >
+              <div
+                class="w-14 h-14 mx-auto mb-3 rounded-2xl bg-orange-100 dark:bg-orange-950/50 text-orange-600 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform"
+              >
+                <i class="fas fa-tshirt"></i>
+              </div>
+              <h4 class="font-bold text-sm text-gray-800 dark:text-gray-100" data-i18n="cat_clothing">
+                পোশাক ও ফ্যাশন
+              </h4>
+              <p class="text-xs text-gray-400 mt-0.5" data-i18n="cat_clothing_sub">
+                শার্ট, কুর্তি, বাচ্চাদের পোশাক
+              </p>
+            </button>
+
+            <button
+              onclick="setCategoryAndGo('Electronics')"
+              class="group p-5 bg-white dark:bg-slate-900 rounded-2xl border border-gray-100 dark:border-slate-800 hover:border-brand-500 dark:hover:border-brand-500 shadow-sm hover:shadow-md transition-all text-center"
+            >
+              <div
+                class="w-14 h-14 mx-auto mb-3 rounded-2xl bg-blue-100 dark:bg-blue-950/50 text-blue-600 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform"
+              >
+                <i class="fas fa-headphones"></i>
+              </div>
+              <h4 class="font-bold text-sm text-gray-800 dark:text-gray-100" data-i18n="cat_electronics">
+                ইলেকট্রনিক্স
+              </h4>
+              <p class="text-xs text-gray-400 mt-0.5" data-i18n="cat_electronics_sub">
+                ইয়ারবাডস, ক্যাবল ও গ্যাজেট
+              </p>
+            </button>
+
+            <button
+              onclick="setCategoryAndGo('Home')"
+              class="group p-5 bg-white dark:bg-slate-900 rounded-2xl border border-gray-100 dark:border-slate-800 hover:border-brand-500 dark:hover:border-brand-500 shadow-sm hover:shadow-md transition-all text-center"
+            >
+              <div
+                class="w-14 h-14 mx-auto mb-3 rounded-2xl bg-emerald-100 dark:bg-emerald-950/50 text-emerald-600 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform"
+              >
+                <i class="fas fa-blender"></i>
+              </div>
+              <h4 class="font-bold text-sm text-gray-800 dark:text-gray-100" data-i18n="cat_home">
+                গৃহস্থালি সরঞ্জাম
+              </h4>
+              <p class="text-xs text-gray-400 mt-0.5" data-i18n="cat_home_sub">
+                রান্নাঘর ও প্রয়োজনীয় সামগ্রী
+              </p>
+            </button>
+
+            <button
+              onclick="setCategoryAndGo('Cosmetics')"
+              class="group p-5 bg-white dark:bg-slate-900 rounded-2xl border border-gray-100 dark:border-slate-800 hover:border-brand-500 dark:hover:border-brand-500 shadow-sm hover:shadow-md transition-all text-center"
+            >
+              <div
+                class="w-14 h-14 mx-auto mb-3 rounded-2xl bg-pink-100 dark:bg-pink-950/50 text-pink-600 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform"
+              >
+                <i class="fas fa-spa"></i>
+              </div>
+              <h4 class="font-bold text-sm text-gray-800 dark:text-gray-100" data-i18n="cat_cosmetics">
+                কসমেটিক্স ও রূপচর্চা
+              </h4>
+              <p class="text-xs text-gray-400 mt-0.5" data-i18n="cat_cosmetics_sub">ক্রিম, তেল ও প্রসাধন</p>
+            </button>
+
+            <button
+              onclick="setCategoryAndGo('Groceries')"
+              class="group p-5 bg-white dark:bg-slate-900 rounded-2xl border border-gray-100 dark:border-slate-800 hover:border-brand-500 dark:hover:border-brand-500 shadow-sm hover:shadow-md transition-all text-center col-span-2 sm:col-span-1"
+            >
+              <div
+                class="w-14 h-14 mx-auto mb-3 rounded-2xl bg-amber-100 dark:bg-amber-950/50 text-amber-600 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform"
+              >
+                <i class="fas fa-shopping-basket"></i>
+              </div>
+              <h4 class="font-bold text-sm text-gray-800 dark:text-gray-100" data-i18n="cat_groceries">
+                নিত্যপ্রয়োজনীয় সদাই
+              </h4>
+              <p class="text-xs text-gray-400 mt-0.5" data-i18n="cat_groceries_sub">চাল, খাঁটি তেল ইত্যাদি</p>
+            </button>
+          </div>
+        </div>
+
+        <!-- Featured Items Teaser -->
+        <div class="py-12 bg-gray-100/70 dark:bg-slate-900/40">
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between mb-8">
+              <div>
+                <h3 class="text-2xl font-black text-gray-900 dark:text-white" data-i18n="featured_title">
+                  হট ডিল ও ইন-স্টক পণ্য
+                </h3>
+                <p class="text-xs sm:text-sm text-gray-500 dark:text-gray-400" data-i18n="featured_sub">
+                  টুপির হাটের দোকানে সরাসরি পাওয়া যাচ্ছে
+                </p>
+              </div>
+              <a
+                href="#products"
+                onclick="navigateTo('products')"
+                class="text-sm font-bold text-brand-600 dark:text-brand-400 hover:underline flex items-center gap-1"
+              >
+                <span data-i18n="view_all">সবগুলো দেখুন</span> <i class="fas fa-arrow-right text-xs"></i>
+              </a>
+            </div>
+
+            <div id="homeFeaturedGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              <!-- Rendered by JavaScript -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Why SajMi Store Section -->
+        <div class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid md:grid-cols-3 gap-8">
+            <div
+              class="p-6 bg-white dark:bg-slate-900 rounded-3xl border border-gray-100 dark:border-slate-800 text-center sm:text-left"
+            >
+              <div
+                class="w-12 h-12 bg-brand-100 dark:bg-brand-950 text-brand-600 rounded-2xl flex items-center justify-center text-xl mb-4 mx-auto sm:mx-0"
+              >
+                <i class="fas fa-hand-holding-dollar"></i>
+              </div>
+              <h4 class="text-lg font-bold text-gray-900 dark:text-white mb-2" data-i18n="why_1_title">
+                ন্যায্য ও সৎ দাম
+              </h4>
+              <p class="text-sm text-gray-500 dark:text-gray-400" data-i18n="why_1_desc">
+                টুপির হাট ও নবাবগঞ্জের সাধারণ মানুষের সাধ্যের মধ্যে সেরা দামে পণ্য নিশ্চিত করাই আমাদের লক্ষ্য।
+              </p>
+            </div>
+
+            <div
+              class="p-6 bg-white dark:bg-slate-900 rounded-3xl border border-gray-100 dark:border-slate-800 text-center sm:text-left"
+            >
+              <div
+                class="w-12 h-12 bg-emerald-100 dark:bg-emerald-950 text-emerald-600 rounded-2xl flex items-center justify-center text-xl mb-4 mx-auto sm:mx-0"
+              >
+                <i class="fas fa-comments"></i>
+              </div>
+              <h4 class="text-lg font-bold text-gray-900 dark:text-white mb-2" data-i18n="why_2_title">
+                সরাসরি মালিকের সাথে কথা
+              </h4>
+              <p class="text-sm text-gray-500 dark:text-gray-400" data-i18n="why_2_desc">
+                প্রতিটি কল এবং ফেসবুক/হোয়াটসঅ্যাপ মেসেজ মোঃ মাজহারুল ইসলাম নিজে উত্তর দিয়ে শতভাগ সহযোগিতা
+                করেন।
+              </p>
+            </div>
+
+            <div
+              class="p-6 bg-white dark:bg-slate-900 rounded-3xl border border-gray-100 dark:border-slate-800 text-center sm:text-left"
+            >
+              <div
+                class="w-12 h-12 bg-blue-100 dark:bg-blue-950 text-blue-600 rounded-2xl flex items-center justify-center text-xl mb-4 mx-auto sm:mx-0"
+              >
+                <i class="fas fa-layer-group"></i>
+              </div>
+              <h4 class="text-lg font-bold text-gray-900 dark:text-white mb-2" data-i18n="why_3_title">
+                Next.js এ ভবিষ্যৎ ডিজিটাল রূপান্তর
+              </h4>
+              <p class="text-sm text-gray-500 dark:text-gray-400" data-i18n="why_3_desc">
+                দোকান ও ফেসবুকের পাশাপাশি খুব শীঘ্রই একটি আধুনিক পূর্ণাঙ্গ ই-কমার্স প্ল্যাটফর্ম তৈরি করা হবে।
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= PAGE 2: PRODUCTS CATALOG ================= -->
+      <section id="page-products" class="page-section">
+        <div
+          class="bg-gradient-to-r from-slate-900 via-gray-900 to-slate-950 text-white py-12 px-4 sm:px-6 lg:px-8"
+        >
+          <div class="max-w-7xl mx-auto flex flex-col md:flex-row md:items-center justify-between gap-6">
+            <div>
+              <h1 class="text-3xl sm:text-4xl font-black" data-i18n="catalog_header_title">পণ্য ক্যাটালগ</h1>
+              <p class="text-sm text-gray-400 mt-1" data-i18n="catalog_header_desc">
+                আমাদের কালেকশন দেখুন। যেকোনো পণ্যে ক্লিক করে হোয়াটসঅ্যাপ বা ফেসবুকে তাৎক্ষণিক অর্ডার করুন।
+              </p>
+            </div>
+
+            <!-- Notice Badge -->
+            <div
+              class="bg-white/10 border border-white/10 backdrop-blur-md rounded-2xl p-4 flex items-center gap-3"
+            >
+              <div
+                class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-lg"
+              >
+                <i class="fab fa-whatsapp"></i>
+              </div>
+              <div class="text-xs">
+                <p class="font-bold text-white" data-i18n="how_order_badge_title">সহজে অর্ডার নিয়ম:</p>
+                <p class="text-gray-300" data-i18n="how_order_badge_desc">
+                  "অর্ডার" বাটনে চাপ দিলে পণ্যের নামসহ স্বয়ংক্রিয়ভাবে হোয়াটসঅ্যাপ মেসেজ তৈরি হবে!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+          <!-- Search and Filter Controls -->
+          <div
+            class="flex flex-col md:flex-row items-center justify-between gap-4 pb-8 border-b border-gray-200 dark:border-slate-800"
+          >
+            <!-- Category Pills -->
+            <div
+              class="flex items-center gap-2 overflow-x-auto w-full md:w-auto pb-2 md:pb-0"
+              id="categoryFilterBar"
+            >
+              <button
+                onclick="filterCatalog('All')"
+                class="cat-pill active px-4 py-2 rounded-xl text-xs font-bold border border-brand-500 bg-brand-500 text-white transition-all whitespace-nowrap"
+                data-category="All"
+              >
+                <span data-i18n="filter_all">সব পণ্য</span>
+              </button>
+              <button
+                onclick="filterCatalog('Clothing')"
+                class="cat-pill px-4 py-2 rounded-xl text-xs font-bold border border-gray-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-gray-700 dark:text-gray-300 hover:border-brand-500 transition-all whitespace-nowrap"
+                data-category="Clothing"
+              >
+                👗 <span data-i18n="filter_clothing">পোশাক</span>
+              </button>
+              <button
+                onclick="filterCatalog('Electronics')"
+                class="cat-pill px-4 py-2 rounded-xl text-xs font-bold border border-gray-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-gray-700 dark:text-gray-300 hover:border-brand-500 transition-all whitespace-nowrap"
+                data-category="Electronics"
+              >
+                ⚡ <span data-i18n="filter_electronics">ইলেকট্রনিক্স</span>
+              </button>
+              <button
+                onclick="filterCatalog('Home')"
+                class="cat-pill px-4 py-2 rounded-xl text-xs font-bold border border-gray-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-gray-700 dark:text-gray-300 hover:border-brand-500 transition-all whitespace-nowrap"
+                data-category="Home"
+              >
+                🏠 <span data-i18n="filter_home">গৃহস্থালি</span>
+              </button>
+              <button
+                onclick="filterCatalog('Cosmetics')"
+                class="cat-pill px-4 py-2 rounded-xl text-xs font-bold border border-gray-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-gray-700 dark:text-gray-300 hover:border-brand-500 transition-all whitespace-nowrap"
+                data-category="Cosmetics"
+              >
+                ✨ <span data-i18n="filter_cosmetics">কসমেটিক্স</span>
+              </button>
+              <button
+                onclick="filterCatalog('Groceries')"
+                class="cat-pill px-4 py-2 rounded-xl text-xs font-bold border border-gray-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-gray-700 dark:text-gray-300 hover:border-brand-500 transition-all whitespace-nowrap"
+                data-category="Groceries"
+              >
+                🌾 <span data-i18n="filter_groceries">নিত্যপ্রয়োজনীয়</span>
+              </button>
+            </div>
+
+            <!-- Search Input -->
+            <div class="relative w-full md:w-72">
+              <input
+                type="text"
+                id="productSearch"
+                oninput="handleSearch()"
+                placeholder="পণ্যের নাম খুঁজুন..."
+                class="w-full pl-10 pr-4 py-2.5 rounded-xl border border-gray-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-xs text-gray-800 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-brand-500 shadow-sm"
+              />
+              <i class="fas fa-search absolute left-3.5 top-3.5 text-gray-400 text-xs"></i>
+            </div>
+          </div>
+
+          <!-- Products Grid Container -->
+          <div id="catalogGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
+            <!-- Populated by JavaScript -->
+          </div>
+
+          <!-- Empty State -->
+          <div id="noProductsFound" class="hidden text-center py-20">
+            <div
+              class="w-16 h-16 rounded-full bg-gray-100 dark:bg-slate-800 flex items-center justify-center mx-auto text-gray-400 text-2xl mb-4"
+            >
+              <i class="fas fa-search"></i>
+            </div>
+            <h4 class="text-lg font-bold text-gray-800 dark:text-white" data-i18n="no_item_title">
+              কোনো পণ্য পাওয়া যায়নি
+            </h4>
+            <p class="text-xs text-gray-500 dark:text-gray-400 mt-1" data-i18n="no_item_desc">
+              ভিন্ন নাম দিয়ে খুঁজুন অথবা অন্য ক্যাটাগরি ফিল্টার নির্বাচন করুন।
+            </p>
+            <button
+              onclick="filterCatalog('All')"
+              class="mt-4 px-4 py-2 rounded-lg bg-brand-600 text-white text-xs font-bold"
+              data-i18n="show_all_btn"
+            >
+              সব পণ্য দেখুন
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= PAGE 3: HOW TO ORDER ================= -->
+      <section id="page-how-to-order" class="page-section">
+        <div
+          class="bg-gradient-to-r from-emerald-800 via-teal-900 to-slate-900 text-white py-14 px-4 sm:px-6 lg:px-8"
+        >
+          <div class="max-w-4xl mx-auto text-center">
+            <h1 class="text-3xl sm:text-5xl font-black" data-i18n="how_page_title">
+              সাজমি স্টোর থেকে অর্ডার করার নিয়ম
+            </h1>
+            <p
+              class="text-sm sm:text-base text-emerald-100/90 mt-3 max-w-2xl mx-auto"
+              data-i18n="how_page_desc"
+            >
+              আমরা সরাসরি যোগাযোগের মাধ্যমে অর্ডার নিই যাতে আপনি সঠিক পণ্য, আসল ছবি দেখে এবং স্টক নিশ্চিত হয়ে
+              নিশ্চিন্তে কিনতে পারেন।
+            </p>
+          </div>
+        </div>
+
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <!-- Step by Step -->
+          <div class="grid md:grid-cols-3 gap-8">
+            <div
+              class="bg-white dark:bg-slate-900 p-8 rounded-3xl border border-gray-100 dark:border-slate-800 text-center relative shadow-sm"
+            >
+              <div
+                class="w-12 h-12 bg-brand-500 text-white font-black text-xl rounded-2xl flex items-center justify-center mx-auto mb-4"
+              >
+                ১
+              </div>
+              <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2" data-i18n="step1_title">
+                পছন্দের পণ্য বেছে নিন
+              </h3>
+              <p class="text-xs sm:text-sm text-gray-500 dark:text-gray-400" data-i18n="step1_desc">
+                আমাদের পণ্যের তালিকা দেখুন বা টুপির হাটের দোকানে আসুন। পণ্যের নাম বা একটি স্ক্রিনশট নিন।
+              </p>
+            </div>
+
+            <div
+              class="bg-white dark:bg-slate-900 p-8 rounded-3xl border border-gray-100 dark:border-slate-800 text-center relative shadow-sm"
+            >
+              <div
+                class="w-12 h-12 bg-emerald-600 text-white font-black text-xl rounded-2xl flex items-center justify-center mx-auto mb-4"
+              >
+                ২
+              </div>
+              <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2" data-i18n="step2_title">
+                মেসেজ দিন অথবা কল করুন
+              </h3>
+              <p class="text-xs sm:text-sm text-gray-500 dark:text-gray-400" data-i18n="step2_desc">
+                হোয়াটসঅ্যাপ বা ফেসবুক পেজে মেসেজ করুন অথবা সরাসরি <strong>01747615357</strong> নম্বরে কল দিন।
+              </p>
+            </div>
+
+            <div
+              class="bg-white dark:bg-slate-900 p-8 rounded-3xl border border-gray-100 dark:border-slate-800 text-center relative shadow-sm"
+            >
+              <div
+                class="w-12 h-12 bg-blue-600 text-white font-black text-xl rounded-2xl flex items-center justify-center mx-auto mb-4"
+              >
+                ৩
+              </div>
+              <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2" data-i18n="step3_title">
+                নিশ্চিত করুন ও গ্রহণ করুন
+              </h3>
+              <p class="text-xs sm:text-sm text-gray-500 dark:text-gray-400" data-i18n="step3_desc">
+                মোঃ মাজহারুল ইসলাম আপনার স্টক ও সাইজ নিশ্চিত করে টুপির হাট দোকানে বা স্থানীয় ডেলিভারিতে পণ্য
+                বুঝিয়ে দেবেন!
+              </p>
+            </div>
+          </div>
+
+          <!-- 3 Order Method Cards -->
+          <div class="mt-16 space-y-6">
+            <h2
+              class="text-2xl font-black text-gray-900 dark:text-white text-center"
+              data-i18n="order_channels_title"
+            >
+              সরাসরি অর্ডার চ্যানেলসমূহ
+            </h2>
+
+            <div class="grid md:grid-cols-3 gap-6">
+              <!-- WhatsApp -->
+              <div
+                class="p-6 rounded-3xl bg-emerald-50 dark:bg-emerald-950/20 border border-emerald-200 dark:border-emerald-800 flex flex-col justify-between"
+              >
+                <div>
+                  <div
+                    class="w-12 h-12 rounded-2xl bg-emerald-600 text-white flex items-center justify-center text-2xl mb-4"
+                  >
+                    <i class="fab fa-whatsapp"></i>
+                  </div>
+                  <h4 class="text-lg font-bold text-gray-900 dark:text-white" data-i18n="channel_wa_name">
+                    হোয়াটসঅ্যাপ (WhatsApp)
+                  </h4>
+                  <p class="text-xs text-gray-600 dark:text-gray-300 mt-2" data-i18n="channel_wa_desc">
+                    সরাসরি পণ্যের আসল ছবি, ভিডিও দেখতে ও দ্রুত চ্যাট করতে হোয়াটসঅ্যাপ সবচেয়ে সহজ।
+                  </p>
+                  <p class="text-sm font-black text-emerald-700 dark:text-emerald-400 mt-4">
+                    +880 1747-615357
+                  </p>
+                </div>
+                <a
+                  href="https://wa.me/8801747615357?text=হ্যালো%20মাজহারুল%20ভাই%2C%20আমি%20অর্ডার%20করতে%20চাই"
+                  target="_blank"
+                  class="mt-6 w-full text-center py-3 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold rounded-xl transition-colors"
+                  data-i18n="btn_open_wa"
+                >
+                  হোয়াটসঅ্যাপে চ্যাট করুন
+                </a>
+              </div>
+
+              <!-- Facebook -->
+              <div
+                class="p-6 rounded-3xl bg-blue-50 dark:bg-blue-950/20 border border-blue-200 dark:border-blue-800 flex flex-col justify-between"
+              >
+                <div>
+                  <div
+                    class="w-12 h-12 rounded-2xl bg-blue-600 text-white flex items-center justify-center text-2xl mb-4"
+                  >
+                    <i class="fab fa-facebook-messenger"></i>
+                  </div>
+                  <h4 class="text-lg font-bold text-gray-900 dark:text-white" data-i18n="channel_fb_name">
+                    ফেসবুক পেজ (Facebook)
+                  </h4>
+                  <p class="text-xs text-gray-600 dark:text-gray-300 mt-2" data-i18n="channel_fb_desc">
+                    নতুন স্টক আপডেট ও বিশেষ অফার জানতে পেজ ফলো করুন এবং ইনবক্সে মেসেজ পাঠান।
+                  </p>
+                  <p class="text-sm font-black text-blue-700 dark:text-blue-400 mt-4">SajMi Store Facebook</p>
+                </div>
+                <a
+                  href="https://www.facebook.com/profile.php?id=100088521138103"
+                  target="_blank"
+                  class="mt-6 w-full text-center py-3 bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold rounded-xl transition-colors"
+                  data-i18n="btn_open_fb"
+                >
+                  ফেসবুক পেজে যান
+                </a>
+              </div>
+
+              <!-- Phone Call -->
+              <div
+                class="p-6 rounded-3xl bg-amber-50 dark:bg-amber-950/20 border border-amber-200 dark:border-amber-800 flex flex-col justify-between"
+              >
+                <div>
+                  <div
+                    class="w-12 h-12 rounded-2xl bg-amber-600 text-white flex items-center justify-center text-2xl mb-4"
+                  >
+                    <i class="fas fa-phone-alt"></i>
+                  </div>
+                  <h4 class="text-lg font-bold text-gray-900 dark:text-white" data-i18n="channel_phone_name">
+                    সরাসরি ফোন কল
+                  </h4>
+                  <p class="text-xs text-gray-600 dark:text-gray-300 mt-2" data-i18n="channel_phone_desc">
+                    দোকানের সময়ে সরাসরি মালিক মোঃ মাজহারুল ইসলামের সাথে সরাসরি কথা বলুন।
+                  </p>
+                  <p class="text-sm font-black text-amber-700 dark:text-amber-400 mt-4">01747-615357</p>
+                </div>
+                <a
+                  href="tel:01747615357"
+                  class="mt-6 w-full text-center py-3 bg-amber-600 hover:bg-amber-700 text-white text-xs font-bold rounded-xl transition-colors"
+                  data-i18n="btn_call_now"
+                >
+                  এখনই কল করুন
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= PAGE 4: ABOUT ================= -->
+      <section id="page-about" class="page-section">
+        <div
+          class="bg-gradient-to-r from-brand-700 via-orange-800 to-amber-900 text-white py-14 px-4 sm:px-6 lg:px-8"
+        >
+          <div class="max-w-4xl mx-auto text-center">
+            <span
+              class="text-xs font-extrabold uppercase tracking-widest text-amber-300"
+              data-i18n="about_tag"
+              >আমাদের সম্পর্কে</span
+            >
+            <h1 class="text-3xl sm:text-5xl font-black mt-1" data-i18n="about_title">
+              আমাদের গল্প ও ভবিষ্যৎ পরিকল্পনা
+            </h1>
+            <p class="text-sm sm:text-base text-orange-100 mt-2" data-i18n="about_desc">
+              দিনাজপুরের নবাবগঞ্জ থেকে শুরু করে একটি নির্ভরযোগ্য ই-কমার্স শপ হিসেবে গড়ে তোলার প্রতিশ্রুতি।
+            </p>
+          </div>
+        </div>
+
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-16">
+          <!-- Owner Profile Card -->
+          <div
+            class="bg-white dark:bg-slate-900 rounded-3xl p-8 sm:p-12 border border-gray-100 dark:border-slate-800 shadow-xl grid md:grid-cols-12 gap-8 items-center"
+          >
+            <div class="md:col-span-4 text-center">
+              <div
+                class="w-36 h-36 mx-auto rounded-3xl bg-gradient-to-tr from-brand-600 via-orange-500 to-amber-400 text-white flex items-center justify-center text-6xl shadow-xl shadow-brand-500/20 mb-4"
+              >
+                <i class="fas fa-user-tie"></i>
+              </div>
+              <h3 class="text-xl font-black text-gray-900 dark:text-white" data-i18n="owner_name">
+                মোঃ মাজহারুল ইসলাম
+              </h3>
+              <p class="text-xs font-bold text-brand-600 dark:text-brand-400" data-i18n="owner_role">
+                প্রতিষ্ঠাতা ও স্বত্বাধিকারী
+              </p>
+              <p class="text-xs text-gray-500 dark:text-gray-400 mt-1" data-i18n="owner_loc">
+                টুপির হাট, নবাবগঞ্জ, দিনাজপুর
+              </p>
+
+              <div class="mt-4 flex items-center justify-center gap-3">
+                <a
+                  href="https://www.facebook.com/profile.php?id=100088521138103"
+                  target="_blank"
+                  class="w-9 h-9 rounded-xl bg-blue-600 text-white flex items-center justify-center text-sm hover:scale-110 transition-transform"
+                >
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+                <a
+                  href="https://wa.me/8801747615357"
+                  target="_blank"
+                  class="w-9 h-9 rounded-xl bg-emerald-600 text-white flex items-center justify-center text-sm hover:scale-110 transition-transform"
+                >
+                  <i class="fab fa-whatsapp"></i>
+                </a>
+                <a
+                  href="tel:01747615357"
+                  class="w-9 h-9 rounded-xl bg-amber-600 text-white flex items-center justify-center text-sm hover:scale-110 transition-transform"
+                >
+                  <i class="fas fa-phone-alt"></i>
+                </a>
+              </div>
+            </div>
+
+            <div class="md:col-span-8 space-y-4">
+              <span
+                class="px-3 py-1 rounded-full bg-brand-50 dark:bg-brand-950/60 text-brand-600 dark:text-brand-400 text-xs font-bold"
+                data-i18n="owner_words_tag"
+                >মালিকের পক্ষ থেকে বাণী</span
+              >
+              <h2
+                class="text-2xl sm:text-3xl font-black text-gray-900 dark:text-white"
+                data-i18n="owner_quote"
+              >
+                "সততা, সঠিক মূল্য এবং স্থানীয় মানুষদের সেরা সেবা দেওয়াই আমাদের প্রথম লক্ষ্য।"
+              </h2>
+              <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed" data-i18n="owner_story_1">
+                টুপির হাট এবং নবাবগঞ্জের মানুষদের জন্য ন্যায্যমূল্যে মানসম্মত পোশাক, ইলেকট্রনিক্স, রূপচর্চা ও
+                নিত্যপ্রয়োজনীয় পণ্য সহজে পৌঁছে দিতে <strong>সাজমি স্টোর (SajMi Store)</strong> প্রতিষ্ঠা
+                করেছি।
+              </p>
+              <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed" data-i18n="owner_story_2">
+                বর্তমানে আমরা সরাসরি আমাদের নিজস্ব দোকানে এবং ফেসবুক পেজের মাধ্যমে ক্রেতাদের চাহিদা পূরণ করছি।
+                ক্রেতা যাতে কোনো দালালের ঝামেলা ছাড়া সরাসরি আমার সাথে কথা বলে নিশ্চিন্তে পণ্য কিনতে পারেন,
+                সেটাই আমাদের বিশেষত্ব।
+              </p>
+            </div>
+          </div>
+
+          <!-- Scaling Roadmap (Next.js Vision) -->
+          <div
+            class="bg-gradient-to-br from-slate-900 via-gray-900 to-slate-950 text-white p-8 sm:p-12 rounded-3xl border border-slate-800 shadow-2xl"
+          >
+            <div class="text-center max-w-xl mx-auto mb-10">
+              <span class="text-xs font-bold tracking-widest uppercase text-brand-400" data-i18n="roadmap_tag"
+                >আমাদের পরিকল্পনা</span
+              >
+              <h3 class="text-2xl sm:text-3xl font-black mt-1" data-i18n="roadmap_title">
+                স্থানীয় দোকান থেকে ই-কমার্সে রূপান্তর
+              </h3>
+              <p class="text-xs sm:text-sm text-gray-400 mt-2" data-i18n="roadmap_desc">
+                পর্যায়ক্রমে যেভাবে বড় হচ্ছে সাজমি স্টোর।
+              </p>
+            </div>
+
+            <div class="grid sm:grid-cols-3 gap-6">
+              <!-- Phase 1 -->
+              <div class="bg-white/5 p-6 rounded-2xl border border-white/10 relative">
+                <span
+                  class="bg-emerald-500 text-white text-[10px] font-bold px-2 py-0.5 rounded-full uppercase"
+                  data-i18n="phase1_badge"
+                  >বর্তমান পর্যায়</span
+                >
+                <h4 class="text-base font-bold mt-3" data-i18n="phase1_title">
+                  ধাপ ১: দোকান ও সোশ্যাল কমার্স
+                </h4>
+                <p class="text-xs text-gray-400 mt-2 leading-relaxed" data-i18n="phase1_desc">
+                  টুপির হাটে সরাসরি দোকান + হোয়াটসঅ্যাপ, ফেসবুক পেজ ও সরাসরি কলের মাধ্যমে অর্ডার ও ডেলিভারি।
+                </p>
+              </div>
+
+              <!-- Phase 2 -->
+              <div class="bg-white/5 p-6 rounded-2xl border border-white/10 relative">
+                <span
+                  class="bg-amber-500 text-white text-[10px] font-bold px-2 py-0.5 rounded-full uppercase"
+                  data-i18n="phase2_badge"
+                  >চলমান কাজ</span
+                >
+                <h4 class="text-base font-bold mt-3" data-i18n="phase2_title">ধাপ ২: ডিজিটাল ক্যাটালগ</h4>
+                <p class="text-xs text-gray-400 mt-2 leading-relaxed" data-i18n="phase2_desc">
+                  ইন্টারেক্টিভ প্রোডাক্ট ক্যাটালগ, ক্যাটাগরি ফিল্টার এবং স্বয়ংক্রিয় অর্ডার মেসেজ জেনারেটর।
+                </p>
+              </div>
+
+              <!-- Phase 3 -->
+              <div class="bg-white/5 p-6 rounded-2xl border border-brand-500/40 relative">
+                <span
+                  class="bg-brand-500 text-white text-[10px] font-bold px-2 py-0.5 rounded-full uppercase"
+                  data-i18n="phase3_badge"
+                  >ভবিষ্যৎ রূপরেখা</span
+                >
+                <h4 class="text-base font-bold mt-3" data-i18n="phase3_title">ধাপ ৩: অনলাইন শপ</h4>
+                <p class="text-xs text-gray-400 mt-2 leading-relaxed" data-i18n="phase3_desc">
+                  Next.js ফ্রেমওয়ার্ক দিয়ে তৈরি হবে সম্পূর্ণ ওয়েবসাইট, যাতে থাকবে অনলাইন পেমেন্ট (bKash/Nagad)
+                  ও সারা বাংলাদেশে কুরিয়ার ব্যবস্থা।
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= PAGE 5: CONTACT & LOCATION ================= -->
+      <section id="page-contact" class="page-section">
+        <div
+          class="bg-gradient-to-r from-gray-900 via-slate-900 to-black text-white py-14 px-4 sm:px-6 lg:px-8"
+        >
+          <div class="max-w-4xl mx-auto text-center">
+            <span
+              class="text-xs font-bold uppercase tracking-widest text-brand-400"
+              data-i18n="contact_page_tag"
+              >সরাসরি যোগাযোগ</span
+            >
+            <h1 class="text-3xl sm:text-5xl font-black mt-1" data-i18n="contact_page_title">
+              আমাদের সাথে যোগাযোগ করুন
+            </h1>
+            <p class="text-sm text-gray-400 mt-2" data-i18n="contact_page_desc">
+              যেকোনো প্রশ্ন বা অর্ডারের জন্য মোঃ মাজহারুল ইসলাম আপনাকে সাহায্য করতে প্রস্তুত।
+            </p>
+          </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <div class="grid lg:grid-cols-12 gap-10">
+            <!-- Contact Info Column -->
+            <div class="lg:col-span-5 space-y-6">
+              <div
+                class="bg-white dark:bg-slate-900 p-8 rounded-3xl border border-gray-100 dark:border-slate-800 shadow-sm space-y-6"
+              >
+                <h3 class="text-xl font-black text-gray-900 dark:text-white" data-i18n="store_info_title">
+                  দোকানের তথ্য
+                </h3>
+
+                <div class="space-y-5">
+                  <div class="flex items-start gap-4">
+                    <div
+                      class="w-10 h-10 rounded-xl bg-brand-50 dark:bg-brand-950 text-brand-600 flex items-center justify-center flex-shrink-0"
+                    >
+                      <i class="fas fa-user-circle text-lg"></i>
+                    </div>
+                    <div>
+                      <p class="text-xs font-bold text-gray-400" data-i18n="c_owner_tag">
+                        মালিক ও স্বত্বাধিকারী
+                      </p>
+                      <p class="text-sm font-bold text-gray-900 dark:text-white" data-i18n="c_owner_val">
+                        মোঃ মাজহারুল ইসলাম
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="flex items-start gap-4">
+                    <div
+                      class="w-10 h-10 rounded-xl bg-emerald-50 dark:bg-emerald-950 text-emerald-600 flex items-center justify-center flex-shrink-0"
+                    >
+                      <i class="fas fa-phone-alt text-lg"></i>
+                    </div>
+                    <div>
+                      <p class="text-xs font-bold text-gray-400" data-i18n="c_phone_tag">
+                        ফোন / হোয়াটসঅ্যাপ
+                      </p>
+                      <a href="tel:01747615357" class="text-sm font-bold text-emerald-600 hover:underline"
+                        >01747615357</a
+                      >
+                      <p class="text-[11px] text-gray-400" data-i18n="c_phone_time">
+                        খোলা: সকাল ৮:০০ – রাত ১০:০০
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="flex items-start gap-4">
+                    <div
+                      class="w-10 h-10 rounded-xl bg-blue-50 dark:bg-blue-950 text-blue-600 flex items-center justify-center flex-shrink-0"
+                    >
+                      <i class="fab fa-facebook-f text-lg"></i>
+                    </div>
+                    <div>
+                      <p class="text-xs font-bold text-gray-400" data-i18n="c_fb_tag">ফেসবুক পেজ</p>
+                      <a
+                        href="https://www.facebook.com/profile.php?id=100088521138103"
+                        target="_blank"
+                        class="text-sm font-bold text-blue-600 hover:underline"
+                        >SajMi Store Facebook Page</a
+                      >
+                    </div>
+                  </div>
+
+                  <div class="flex items-start gap-4">
+                    <div
+                      class="w-10 h-10 rounded-xl bg-amber-50 dark:bg-amber-950 text-amber-600 flex items-center justify-center flex-shrink-0"
+                    >
+                      <i class="fas fa-map-marker-alt text-lg"></i>
+                    </div>
+                    <div>
+                      <p class="text-xs font-bold text-gray-400" data-i18n="c_address_tag">
+                        দোকানের স্থায়ী ঠিকানা
+                      </p>
+                      <p class="text-sm font-bold text-gray-900 dark:text-white" data-i18n="c_address_val">
+                        টুপির হাট, নবাবগঞ্জ, দিনাজপুর
+                      </p>
+                      <p class="text-[11px] text-gray-400">রংপুর বিভাগ, বাংলাদেশ</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="pt-4 border-t border-gray-100 dark:border-slate-800">
+                  <a
+                    href="https://wa.me/8801747615357"
+                    target="_blank"
+                    class="w-full flex items-center justify-center gap-2 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs shadow-md transition-all"
+                  >
+                    <i class="fab fa-whatsapp text-base"></i>
+                    <span data-i18n="btn_open_wa">হোয়াটসঅ্যাপে চ্যাট করুন</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Quick Message Builder Form -->
+            <div class="lg:col-span-7">
+              <div
+                class="bg-white dark:bg-slate-900 p-8 rounded-3xl border border-gray-100 dark:border-slate-800 shadow-sm"
+              >
+                <h3 class="text-xl font-black text-gray-900 dark:text-white mb-2" data-i18n="form_title">
+                  সহজে অর্ডার মেসেজ তৈরি করুন
+                </h3>
+                <p class="text-xs text-gray-500 dark:text-gray-400 mb-6" data-i18n="form_desc">
+                  নিচের তথ্যগুলো লিখুন এবং এক ক্লিকেই হোয়াটসঅ্যাপ বা ফেসবুকে পাঠিয়ে দিন।
+                </p>
+
+                <div class="space-y-4">
+                  <div>
+                    <label
+                      class="block text-xs font-bold text-gray-700 dark:text-gray-300 mb-1.5"
+                      data-i18n="f_name_label"
+                      >আপনার পুরো নাম</label
+                    >
+                    <input
+                      type="text"
+                      id="custName"
+                      placeholder="যেমন: তানভীর আহমেদ"
+                      class="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-slate-800 bg-gray-50 dark:bg-slate-800 text-xs focus:ring-2 focus:ring-brand-500 focus:outline-none"
+                    />
+                  </div>
+
+                  <div class="grid sm:grid-cols-2 gap-4">
+                    <div>
+                      <label
+                        class="block text-xs font-bold text-gray-700 dark:text-gray-300 mb-1.5"
+                        data-i18n="f_phone_label"
+                        >আপনার মোবাইল নম্বর</label
+                      >
+                      <input
+                        type="tel"
+                        id="custPhone"
+                        placeholder="01XXXXXXXXX"
+                        class="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-slate-800 bg-gray-50 dark:bg-slate-800 text-xs focus:ring-2 focus:ring-brand-500 focus:outline-none"
+                      />
+                    </div>
+                    <div>
+                      <label
+                        class="block text-xs font-bold text-gray-700 dark:text-gray-300 mb-1.5"
+                        data-i18n="f_addr_label"
+                        >আপনার এলাকা / গ্রাম / উপজেলা</label
+                      >
+                      <input
+                        type="text"
+                        id="custAddress"
+                        placeholder="যেমন: নবাবগঞ্জ, দিনাজপুর"
+                        class="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-slate-800 bg-gray-50 dark:bg-slate-800 text-xs focus:ring-2 focus:ring-brand-500 focus:outline-none"
+                      />
+                    </div>
+                  </div>
+
+                  <div>
+                    <label
+                      class="block text-xs font-bold text-gray-700 dark:text-gray-300 mb-1.5"
+                      data-i18n="f_note_label"
+                      >যে পণ্যগুলো নিতে চান (নাম ও পরিমাণ)</label
+                    >
+                    <textarea
+                      id="custNote"
+                      rows="4"
+                      placeholder="পণ্যের নাম, রঙ, পরিমাণ বা সাইজ উল্লেখ করুন..."
+                      class="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-slate-800 bg-gray-50 dark:bg-slate-800 text-xs focus:ring-2 focus:ring-brand-500 focus:outline-none resize-none"
+                    ></textarea>
+                  </div>
+
+                  <div class="grid sm:grid-cols-2 gap-3 pt-2">
+                    <button
+                      onclick="sendQuickOrder('whatsapp')"
+                      class="flex items-center justify-center gap-2 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs transition-colors"
+                    >
+                      <i class="fab fa-whatsapp text-base"></i>
+                      <span data-i18n="btn_send_wa">হোয়াটসঅ্যাপে পাঠান</span>
+                    </button>
+                    <button
+                      onclick="sendQuickOrder('facebook')"
+                      class="flex items-center justify-center gap-2 py-3.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs transition-colors"
+                    >
+                      <i class="fab fa-facebook-messenger text-base"></i>
+                      <span data-i18n="btn_send_fb">ফেসবুকে পাঠান</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="bg-gray-900 text-gray-300 border-t border-gray-800 mt-auto">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <!-- Store Brand -->
+          <div class="space-y-4">
+            <div class="flex items-center gap-2.5">
+              <div
+                class="w-9 h-9 bg-brand-600 rounded-xl flex items-center justify-center text-white font-black text-xl"
+              >
+                S
+              </div>
+              <span class="text-xl font-black text-white">SajMi Store</span>
+            </div>
+            <p class="text-xs text-gray-400 leading-relaxed" data-i18n="footer_desc">
+              টুপির হাট, নবাবগঞ্জ, দিনাজপুর-এ আপনার বিশ্বস্ত স্থানীয় দোকান। সাশ্রয়ী দাম এবং নির্ভরযোগ্য পণ্য।
+            </p>
+            <div class="flex items-center gap-3 pt-1">
+              <a
+                href="https://www.facebook.com/profile.php?id=100088521138103"
+                target="_blank"
+                class="w-8 h-8 rounded-lg bg-gray-800 hover:bg-blue-600 text-gray-300 hover:text-white flex items-center justify-center text-sm transition-colors"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a
+                href="https://wa.me/8801747615357"
+                target="_blank"
+                class="w-8 h-8 rounded-lg bg-gray-800 hover:bg-emerald-600 text-gray-300 hover:text-white flex items-center justify-center text-sm transition-colors"
+              >
+                <i class="fab fa-whatsapp"></i>
+              </a>
+              <a
+                href="tel:01747615357"
+                class="w-8 h-8 rounded-lg bg-gray-800 hover:bg-brand-600 text-gray-300 hover:text-white flex items-center justify-center text-sm transition-colors"
+              >
+                <i class="fas fa-phone-alt"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Quick Pages -->
+          <div>
+            <h4
+              class="text-xs font-bold tracking-wider text-white uppercase mb-4"
+              data-i18n="footer_pages_title"
+            >
+              ওয়েবসাইট পেজসমূহ
+            </h4>
+            <ul class="space-y-2 text-xs">
+              <li>
+                <a
+                  href="#home"
+                  onclick="navigateTo('home')"
+                  class="hover:text-brand-400 transition-colors"
+                  data-i18n="nav_home"
+                  >হোম</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#products"
+                  onclick="navigateTo('products')"
+                  class="hover:text-brand-400 transition-colors"
+                  data-i18n="nav_products"
+                  >পণ্য ক্যাটালগ</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#how-to-order"
+                  onclick="navigateTo('how-to-order')"
+                  class="hover:text-brand-400 transition-colors"
+                  data-i18n="nav_how"
+                  >অর্ডার করার নিয়ম</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#about"
+                  onclick="navigateTo('about')"
+                  class="hover:text-brand-400 transition-colors"
+                  data-i18n="nav_about"
+                  >মোঃ মাজহারুল ইসলাম সম্পর্কে</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#contact"
+                  onclick="navigateTo('contact')"
+                  class="hover:text-brand-400 transition-colors"
+                  data-i18n="nav_contact"
+                  >যোগাযোগ ও ঠিকানা</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Ordering Channels -->
+          <div>
+            <h4
+              class="text-xs font-bold tracking-wider text-white uppercase mb-4"
+              data-i18n="footer_order_channels"
+            >
+              সরাসরি অর্ডার চ্যানেল
+            </h4>
+            <ul class="space-y-2 text-xs">
+              <li>
+                <a
+                  href="https://wa.me/8801747615357"
+                  target="_blank"
+                  class="hover:text-emerald-400 flex items-center gap-2"
+                >
+                  <i class="fab fa-whatsapp text-emerald-500"></i> WhatsApp: 01747615357
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.facebook.com/profile.php?id=100088521138103"
+                  target="_blank"
+                  class="hover:text-blue-400 flex items-center gap-2"
+                >
+                  <i class="fab fa-facebook-messenger text-blue-500"></i> Facebook Messenger
+                </a>
+              </li>
+              <li>
+                <a href="tel:01747615357" class="hover:text-amber-400 flex items-center gap-2">
+                  <i class="fas fa-phone-alt text-amber-500"></i> Call: 01747615357
+                </a>
+              </li>
+              <li class="text-gray-500 text-[11px] pt-1" data-i18n="footer_future_note">
+                (অনলাইন পেমেন্ট শীঘ্রই আসছে)
+              </li>
+            </ul>
+          </div>
+
+          <!-- Location & Owner -->
+          <div>
+            <h4
+              class="text-xs font-bold tracking-wider text-white uppercase mb-4"
+              data-i18n="footer_owner_title"
+            >
+              মালিক ও ঠিকানা
+            </h4>
+            <div class="text-xs space-y-2 text-gray-400">
+              <p>
+                <strong class="text-white" data-i18n="f_owner_lbl">স্বত্বাধিকারী:</strong>
+                <span data-i18n="c_owner_val">মোঃ মাজহারুল ইসলাম</span>
+              </p>
+              <p>
+                <strong class="text-white" data-i18n="f_loc_lbl">ঠিকানা:</strong>
+                <span data-i18n="c_address_val">টুপির হাট, নবাবগঞ্জ, দিনাজপুর</span>
+              </p>
+              <p><strong class="text-white" data-i18n="f_phone_lbl">মোবাইল:</strong> 01747615357</p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="border-t border-gray-800 mt-10 pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-500 gap-4"
+        >
+          <p>&copy; 2026 SajMi Store (সাজমি স্টোর). All rights reserved.</p>
+          <p class="flex items-center gap-2">
+            <span data-i18n="f_sub_loc">টুপির হাট, নবাবগঞ্জ, দিনাজপুর</span>
+            <span>•</span>
+            <span class="text-brand-400 font-semibold" data-i18n="f_sub_future"
+              >ভবিষ্যতে এ পূর্ণ অনলাইন শপ চালু হবে</span
+            >
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ================= FLOATING ACTION BUTTONS ================= -->
+    <!-- WhatsApp Floating Button -->
+    <a
+      href="https://wa.me/8801747615357?text=হ্যালো%20মাজহারুল%20ভাই%2C%20আমি%20সাজমি%20স্টোর%20থেকে%20অর্ডার%20করতে%20চাই"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="fixed bottom-6 right-6 z-50 w-14 h-14 bg-emerald-500 hover:bg-emerald-600 text-white rounded-full flex items-center justify-center text-2xl pulse-float shadow-xl transition-transform"
+      aria-label="Order on WhatsApp"
+    >
+      <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Messenger Floating Button -->
+    <a
+      href="https://www.facebook.com/profile.php?id=100088521138103"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="fixed bottom-22 right-6 z-50 w-12 h-12 bg-blue-600 hover:bg-blue-700 text-white rounded-full flex items-center justify-center text-xl shadow-lg transition-transform hover:scale-105"
+      aria-label="Message on Facebook"
+    >
+      <i class="fab fa-facebook-messenger"></i>
+    </a>
+
+    <!-- ================= JAVASCRIPT ================= -->
+    <script>
+      // ---------------------------------------------
+      // 1. DATA: STORE PRODUCTS (Bilingual)
+      // ---------------------------------------------
+      const productsData = [
+        {
+          id: 1,
+          nameBn: "পুরুষদের প্রিমিয়াম ফরমাল শার্ট",
+          nameEn: "Men's Premium Formal Shirt",
+          category: "Clothing",
+          price: 650,
+          originalPrice: 850,
+          icon: "fa-shirt",
+        },
+        {
+          id: 2,
+          nameBn: "মহিলাদের স্টাইলিশ কুর্তি কালেকশন",
+          nameEn: "Women's Stylish Kurti Collection",
+          category: "Clothing",
+          price: 750,
+          originalPrice: 950,
+          icon: "fa-person-dress",
+        },
+        {
+          id: 3,
+          nameBn: "বাচ্চাদের আরামদায়ক সুতি টি-শার্ট",
+          nameEn: "Kids Cotton Casual T-Shirt",
+          category: "Clothing",
+          price: 280,
+          originalPrice: 380,
+          icon: "fa-child",
+        },
+        {
+          id: 4,
+          nameBn: "ওয়্যারলেস ব্লুটুথ ইয়ারবাডস TWS",
+          nameEn: "TWS Wireless Bluetooth Earbuds",
+          category: "Electronics",
+          price: 950,
+          originalPrice: 1400,
+          icon: "fa-headphones",
+        },
+        {
+          id: 5,
+          nameBn: "ফাস্ট চার্জিং পাওয়ার ব্যাংক 10,000mAh",
+          nameEn: "Fast Charge Power Bank 10,000mAh",
+          category: "Electronics",
+          price: 1150,
+          originalPrice: 1500,
+          icon: "fa-battery-full",
+        },
+        {
+          id: 6,
+          nameBn: "থ্রি-ইন-ওয়ান ফাস্ট চার্জার ক্যাবল",
+          nameEn: "Braided 3-in-1 Fast Charge Cable",
+          category: "Electronics",
+          price: 180,
+          originalPrice: 250,
+          icon: "fa-plug",
+        },
+        {
+          id: 7,
+          nameBn: "নন-স্টিক কুকিং ফ্রাই প্যান",
+          nameEn: "Non-Stick Cooking Frying Pan",
+          category: "Home",
+          price: 680,
+          originalPrice: 850,
+          icon: "fa-kitchen-set",
+        },
+        {
+          id: 8,
+          nameBn: "স্টেইনলেস স্টিল ওয়াটার বোতল",
+          nameEn: "Stainless Steel Water Bottle",
+          category: "Home",
+          price: 380,
+          originalPrice: 480,
+          icon: "fa-bottle-water",
+        },
+        {
+          id: 9,
+          nameBn: "সিরামিক কফি মগ সেট",
+          nameEn: "Ceramic Coffee Mug Gift Set",
+          category: "Home",
+          price: 320,
+          originalPrice: 450,
+          icon: "fa-mug-hot",
+        },
+        {
+          id: 10,
+          nameBn: "হার্বাল গ্লোয়িং ফেস ওয়াশ 100ml",
+          nameEn: "Herbal Glowing Face Wash 100ml",
+          category: "Cosmetics",
+          price: 260,
+          originalPrice: 320,
+          icon: "fa-pump-soap",
+        },
+        {
+          id: 11,
+          nameBn: "খাঁটি নারিকেল চুলের তেল",
+          nameEn: "Pure Coconut Hair Oil",
+          category: "Cosmetics",
+          price: 220,
+          originalPrice: 270,
+          icon: "fa-spa",
+        },
+        {
+          id: 12,
+          nameBn: "প্রিমিয়াম মিনিকেট চাল ৫ কেজি",
+          nameEn: "Premium Miniket Rice 5kg Bag",
+          category: "Groceries",
+          price: 390,
+          originalPrice: 440,
+          icon: "fa-bowl-rice",
+        },
+        {
+          id: 13,
+          nameBn: "খাঁটি সরিষার রান্নার তেল ১ লিটার",
+          nameEn: "Pure Mustard Cooking Oil 1L",
+          category: "Groceries",
+          price: 250,
+          originalPrice: 290,
+          icon: "fa-jar",
+        },
+        {
+          id: 14,
+          nameBn: "এলইডি ইমার্জেন্সি চার্জার টর্চ",
+          nameEn: "LED Emergency Torch Light",
+          category: "Electronics",
+          price: 420,
+          originalPrice: 550,
+          icon: "fa-lightbulb",
+        },
+      ];
+
+      // ---------------------------------------------
+      // 2. I18N DICTIONARY (Bangla & English)
+      // ---------------------------------------------
+      const translations = {
+        bn: {
+          top_badge: "স্টার্টআপ পর্যায়",
+          top_address: "📍 টুপির হাট, নবাবগঞ্জ, দিনাজপুর | সরাসরি দোকান ও সোশ্যাল মিডিয়া অর্ডার",
+          top_future: "ভবিষ্যতে সম্পূর্ণ অনলাইন শপে রূপান্তর হবে",
+          brand_suffix: "স্টোর",
+          brand_sub: "টুপির হাট, নবাবগঞ্জ",
+          nav_home: "হোম",
+          nav_products: "পণ্য তালিকা",
+          nav_how: "অর্ডার পদ্ধতি",
+          nav_about: "আমাদের সম্পর্কে",
+          nav_contact: "যোগাযোগ ও ঠিকানা",
+          btn_wa_order: "হোয়াটসঅ্যাপ অর্ডার",
+          hero_badge: "টুপির হাট, নবাবগঞ্জ এর নির্ভরযোগ্য শপ",
+          hero_title_1: "সেরা মানের পণ্য",
+          hero_title_2: "ন্যায্য ও সাশ্রয়ী মূল্যে",
+          hero_desc:
+            "সাজমি স্টোর-এ আপনাকে স্বাগতম! প্রতিষ্ঠাতা মোঃ মাজহারুল ইসলাম। টুপির হাটে আমাদের নিজস্ব দোকানে সরাসরি এসে কেনাকাটা করুন অথবা ফেসবুক, হোয়াটসঅ্যাপ এবং ফোনের মাধ্যমে সরাসরি অর্ডার করুন।",
+          hero_notice_title: "অনলাইন পেমেন্ট বা কার্টের কোনো জটিলতা নেই:",
+          hero_notice_desc:
+            "পছন্দের পণ্য বেছে নিয়ে সরাসরি আমাদের ফেসবুক পেজ বা হোয়াটসঅ্যাপে মেসেজ দিন। আমরা দ্রুত অর্ডার কনফার্ম করব!",
+          btn_browse_products: "পণ্যসমূহ দেখুন",
+          btn_fb_page: "ফেসবুক পেজ",
+          stat_1: "সঠিক পণ্য",
+          stat_2_title: "সরাসরি",
+          stat_2: "মালিকের সাথে কথা",
+          stat_3: "ভবিষ্যৎ প্ল্যাটফর্ম",
+          owner_title: "প্রোপাইটর: মোঃ মাজহারুল ইসলাম",
+          owner_address: "টুপির হাট, নবাবগঞ্জ, দিনাজপুর",
+          how_order_fast: "সহজ অর্ডার মাধ্যমসমূহ:",
+          channel_wa_title: "হোয়াটসঅ্যাপ চ্যাট",
+          channel_fb_title: "ফেসবুক পেজ ইনবক্স",
+          channel_fb_sub: "পণ্যের স্ক্রিনশট পাঠিয়ে দিন",
+          channel_phone_title: "সরাসরি ফোন কল",
+          onsite_visit: "সরাসরি দোকানে আসুন: টুপির হাট বাজার, নবাবগঞ্জ, দিনাজপুর",
+          sec_cat_tag: "বিভাগসমূহ",
+          sec_cat_title: "জনপ্রিয় পণ্য ক্যাটাগরি",
+          sec_cat_desc: "পছন্দের ক্যাটাগরি বেছে নিন এবং সরাসরি অর্ডার করুন।",
+          cat_clothing: "পোশাক ও ফ্যাশন",
+          cat_clothing_sub: "শার্ট, কুর্তি, বাচ্চাদের পোশাক",
+          cat_electronics: "ইলেকট্রনিক্স",
+          cat_electronics_sub: "ইয়ারবাডস, ক্যাবল ও গ্যাজেট",
+          cat_home: "গৃহস্থালি সরঞ্জাম",
+          cat_home_sub: "রান্নাঘর ও প্রয়োজনীয় সামগ্রী",
+          cat_cosmetics: "কসমেটিক্স ও রূপচর্চা",
+          cat_cosmetics_sub: "ক্রিম, তেল ও প্রসাধন",
+          cat_groceries: "নিত্যপ্রয়োজনীয় সদাই",
+          cat_groceries_sub: "চাল, খাঁটি তেল ইত্যাদি",
+          featured_title: "হট ডিল ও ইন-স্টক পণ্য",
+          featured_sub: "টুপির হাটের দোকানে সরাসরি পাওয়া যাচ্ছে",
+          view_all: "সবগুলো দেখুন",
+          why_1_title: "ন্যায্য ও সৎ দাম",
+          why_1_desc:
+            "টুপির হাট ও নবাবগঞ্জের সাধারণ মানুষের সাধ্যের মধ্যে সেরা দামে পণ্য নিশ্চিত করাই আমাদের লক্ষ্য।",
+          why_2_title: "সরাসরি মালিকের সাথে কথা",
+          why_2_desc:
+            "প্রতিটি কল এবং ফেসবুক/হোয়াটসঅ্যাপ মেসেজ মোঃ মাজহারুল ইসলাম নিজে উত্তর দিয়ে শতভাগ সহযোগিতা করেন।",
+          why_3_title: "Next.js এ ভবিষ্যৎ ডিজিটাল রূপান্তর",
+          why_3_desc:
+            "দোকান ও ফেসবুকের পাশাপাশি খুব শীঘ্রই একটি আধুনিক পূর্ণাঙ্গ ই-কমার্স প্ল্যাটফর্ম তৈরি করা হবে।",
+          catalog_header_title: "পণ্য ক্যাটালগ",
+          catalog_header_desc:
+            "আমাদের কালেকশন দেখুন। যেকোনো পণ্যে ক্লিক করে হোয়াটসঅ্যাপ বা ফেসবুকে তাৎক্ষণিক অর্ডার করুন।",
+          how_order_badge_title: "সহজে অর্ডার নিয়ম:",
+          how_order_badge_desc:
+            '"অর্ডার" বাটনে চাপ দিলে পণ্যের নামসহ স্বয়ংক্রিয়ভাবে হোয়াটসঅ্যাপ মেসেজ তৈরি হবে!',
+          filter_all: "সব পণ্য",
+          filter_clothing: "পোশাক",
+          filter_electronics: "ইলেকট্রনিক্স",
+          filter_home: "গৃহস্থালি",
+          filter_cosmetics: "কসমেটিক্স",
+          filter_groceries: "নিত্যপ্রয়োজনীয়",
+          no_item_title: "কোনো পণ্য পাওয়া যায়নি",
+          no_item_desc: "ভিন্ন নাম দিয়ে খুঁজুন অথবা অন্য ক্যাটাগরি ফিল্টার নির্বাচন করুন।",
+          show_all_btn: "সব পণ্য দেখুন",
+          how_page_title: "সাজমি স্টোর থেকে অর্ডার করার নিয়ম",
+          how_page_desc:
+            "আমরা সরাসরি যোগাযোগের মাধ্যমে অর্ডার নিই যাতে আপনি সঠিক পণ্য, আসল ছবি দেখে এবং স্টক নিশ্চিত হয়ে নিশ্চিন্তে কিনতে পারেন।",
+          step1_title: "পছন্দের পণ্য বেছে নিন",
+          step1_desc:
+            "আমাদের পণ্যের তালিকা দেখুন বা টুপির হাটের দোকানে আসুন। পণ্যের নাম বা একটি স্ক্রিনশট নিন।",
+          step2_title: "মেসেজ দিন অথবা কল করুন",
+          step2_desc: "হোয়াটসঅ্যাপ বা ফেসবুক পেজে মেসেজ করুন অথবা সরাসরি 01747615357 নম্বরে কল দিন।",
+          step3_title: "নিশ্চিত করুন ও গ্রহণ করুন",
+          step3_desc:
+            "মোঃ মাজহারুল ইসলাম আপনার স্টক ও সাইজ নিশ্চিত করে টুপির হাট দোকানে বা স্থানীয় ডেলিভারিতে পণ্য বুঝিয়ে দেবেন!",
+          order_channels_title: "সরাসরি অর্ডার চ্যানেলসমূহ",
+          channel_wa_name: "হোয়াটসঅ্যাপ (WhatsApp)",
+          channel_wa_desc: "সরাসরি পণ্যের আসল ছবি, ভিডিও দেখতে ও দ্রুত চ্যাট করতে হোয়াটসঅ্যাপ সবচেয়ে সহজ।",
+          btn_open_wa: "হোয়াটসঅ্যাপে চ্যাট করুন",
+          channel_fb_name: "ফেসবুক পেজ (Facebook)",
+          channel_fb_desc: "নতুন স্টক আপডেট ও বিশেষ অফার জানতে পেজ ফলো করুন এবং ইনবক্সে মেসেজ পাঠান।",
+          btn_open_fb: "ফেসবুক পেজে যান",
+          channel_phone_name: "সরাসরি ফোন কল",
+          channel_phone_desc: "দোকানের সময়ে সরাসরি মালিক মোঃ মাজহারুল ইসলামের সাথে সরাসরি কথা বলুন।",
+          btn_call_now: "এখনই কল করুন",
+          about_tag: "আমাদের সম্পর্কে",
+          about_title: "আমাদের গল্প ও ভবিষ্যৎ পরিকল্পনা",
+          about_desc:
+            "দিনাজপুরের নবাবগঞ্জ থেকে শুরু করে একটি নির্ভরযোগ্য ই-কমার্স শপ হিসেবে গড়ে তোলার প্রতিশ্রুতি।",
+          owner_name: "মোঃ মাজহারুল ইসলাম",
+          owner_role: "প্রতিষ্ঠাতা ও স্বত্বাধিকারী",
+          owner_loc: "টুপির হাট, নবাবগঞ্জ, দিনাজপুর",
+          owner_words_tag: "মালিকের পক্ষ থেকে বাণী",
+          owner_quote: '"সততা, সঠিক মূল্য এবং স্থানীয় মানুষদের সেরা সেবা দেওয়াই আমাদের প্রথম লক্ষ্য।"',
+          owner_story_1:
+            "টুপির হাট এবং নবাবগঞ্জের মানুষদের জন্য ন্যায্যমূল্যে মানসম্মত পোশাক, ইলেকট্রনিক্স, রূপচর্চা ও নিত্যপ্রয়োজনীয় পণ্য সহজে পৌঁছে দিতে সাজমি স্টোর (SajMi Store) প্রতিষ্ঠা করেছি।",
+          owner_story_2:
+            "বর্তমানে আমরা সরাসরি আমাদের নিজস্ব দোকানে এবং ফেসবুক পেজের মাধ্যমে ক্রেতাদের চাহিদা পূরণ করছি। ক্রেতা যাতে কোনো দালালের ঝামেলা ছাড়া সরাসরি আমার সাথে কথা বলে নিশ্চিন্তে পণ্য কিনতে পারেন, সেটাই আমাদের বিশেষত্ব।",
+          roadmap_tag: "আমাদের পরিকল্পনা",
+          roadmap_title: "স্থানীয় দোকান থেকে ই-কমার্সে রূপান্তর",
+          roadmap_desc: "পর্যায়ক্রমে যেভাবে বড় হচ্ছে সাজমি স্টোর।",
+          phase1_badge: "বর্তমান পর্যায়",
+          phase1_title: "ধাপ ১: দোকান ও সোশ্যাল কমার্স",
+          phase1_desc:
+            "টুপির হাটে সরাসরি দোকান + হোয়াটসঅ্যাপ, ফেসবুক পেজ ও সরাসরি কলের মাধ্যমে অর্ডার ও ডেলিভারি।",
+          phase2_badge: "চলমান কাজ",
+          phase2_title: "ধাপ ২: ডিজিটাল ক্যাটালগ",
+          phase2_desc:
+            "ইন্টারেক্টিভ প্রোডাক্ট ক্যাটালগ, ক্যাটাগরি ফিল্টার এবং স্বয়ংক্রিয় অর্ডার মেসেজ জেনারেটর।",
+          phase3_badge: "ভবিষ্যৎ রূপরেখা",
+          phase3_title: "ধাপ ৩: অনলাইন শপ",
+          phase3_desc:
+            "Next.js ফ্রেমওয়ার্ক দিয়ে তৈরি হবে সম্পূর্ণ ওয়েবসাইট, যাতে থাকবে অনলাইন পেমেন্ট (bKash/Nagad) ও সারা বাংলাদেশে কুরিয়ার ব্যবস্থা।",
+          contact_page_tag: "সরাসরি যোগাযোগ",
+          contact_page_title: "আমাদের সাথে যোগাযোগ করুন",
+          contact_page_desc:
+            "যেকোনো প্রশ্ন বা অর্ডারের জন্য মোঃ মাজহারুল ইসলাম আপনাকে সাহায্য করতে প্রস্তুত।",
+          store_info_title: "দোকানের তথ্য",
+          c_owner_tag: "মালিক ও স্বত্বাধিকারী",
+          c_owner_val: "মোঃ মাজহারুল ইসলাম",
+          c_phone_tag: "ফোন / হোয়াটসঅ্যাপ",
+          c_phone_time: "খোলা: সকাল ৮:০০ – রাত ১০:০০",
+          c_fb_tag: "ফেসবুক পেজ",
+          c_address_tag: "দোকানের স্থায়ী ঠিকানা",
+          c_address_val: "টুপির হাট, নবাবগঞ্জ, দিনাজপুর",
+          form_title: "সহজে অর্ডার মেসেজ তৈরি করুন",
+          form_desc: "নিচের তথ্যগুলো লিখুন এবং এক ক্লিকেই হোয়াটসঅ্যাপ বা ফেসবুকে পাঠিয়ে দিন।",
+          f_name_label: "আপনার পুরো নাম",
+          f_phone_label: "আপনার মোবাইল নম্বর",
+          f_addr_label: "আপনার এলাকা / গ্রাম / উপজেলা",
+          f_note_label: "যে পণ্যগুলো নিতে চান (নাম ও পরিমাণ)",
+          btn_send_wa: "হোয়াটসঅ্যাপে পাঠান",
+          btn_send_fb: "ফেসবুকে পাঠান",
+          footer_desc:
+            "টুপির হাট, নবাবগঞ্জ, দিনাজপুর-এ আপনার বিশ্বস্ত স্থানীয় দোকান। সাশ্রয়ী দাম এবং নির্ভরযোগ্য পণ্য।",
+          footer_pages_title: "ওয়েবসাইট পেজসমূহ",
+          footer_order_channels: "সরাসরি অর্ডার চ্যানেল",
+          footer_future_note: "(অনলাইন পেমেন্ট শীঘ্রই আসছে)",
+          footer_owner_title: "মালিক ও ঠিকানা",
+          f_owner_lbl: "স্বত্বাধিকারী:",
+          f_loc_lbl: "ঠিকানা:",
+          f_phone_lbl: "মোবাইল:",
+          f_sub_loc: "টুপির হাট, নবাবগঞ্জ, দিনাজপুর",
+          f_sub_future: "ভবিষ্যতে এ পূর্ণ অনলাইন শপ চালু হবে",
+        },
+        en: {
+          top_badge: "Startup Stage",
+          top_address: "📍 Tupir Hat, Nawabganj, Dinajpur | Direct Onsite & Social Orders",
+          top_future: "Scaling to Full Next.js Platform Soon",
+          brand_suffix: "Store",
+          brand_sub: "Tupir Hat, Nawabganj",
+          nav_home: "Home",
+          nav_products: "Products Catalog",
+          nav_how: "How to Order",
+          nav_about: "About Us",
+          nav_contact: "Contact & Location",
+          btn_wa_order: "WhatsApp Order",
+          hero_badge: "Trusted Local Shop at Tupir Hat, Nawabganj",
+          hero_title_1: "Quality Products at",
+          hero_title_2: "Affordable Prices",
+          hero_desc:
+            "Welcome to SajMi Store! Founded by Md Majharul Islam. Shop directly at our physical store at Tupir Hat or order easily via WhatsApp, Facebook, and direct phone calls.",
+          hero_notice_title: "No complicated online checkout required:",
+          hero_notice_desc:
+            "Pick any product and message us on Facebook or WhatsApp. We confirm your items and prepare fast pickup or delivery!",
+          btn_browse_products: "Browse Products",
+          btn_fb_page: "Facebook Page",
+          stat_1: "Authentic Items",
+          stat_2_title: "Direct",
+          stat_2: "Owner Support",
+          stat_3: "Next.js Soon",
+          owner_title: "Proprietor: Md Majharul Islam",
+          owner_address: "Tupir Hat, Nawabganj, Dinajpur",
+          how_order_fast: "Fast Ordering Channels:",
+          channel_wa_title: "WhatsApp Direct",
+          channel_fb_title: "Facebook Messenger",
+          channel_fb_sub: "Send product screenshot",
+          channel_phone_title: "Direct Phone Call",
+          onsite_visit: "Visit our physical store: Tupir Hat Bazar, Nawabganj, Dinajpur",
+          sec_cat_tag: "Departments",
+          sec_cat_title: "Popular Store Categories",
+          sec_cat_desc: "Find what you need and order easily over phone or chat.",
+          cat_clothing: "Clothing & Fashion",
+          cat_clothing_sub: "Shirts, Kurtis, Kids Wear",
+          cat_electronics: "Electronics",
+          cat_electronics_sub: "Earbuds, Cables & Gadgets",
+          cat_home: "Home & Kitchen",
+          cat_home_sub: "Cookware & Essentials",
+          cat_cosmetics: "Cosmetics & Care",
+          cat_cosmetics_sub: "Creams, Oils & Beauty",
+          cat_groceries: "Daily Essentials",
+          cat_groceries_sub: "Rice, Pure Oil & Groceries",
+          featured_title: "Hot & In-Stock Deals",
+          featured_sub: "Available right now at Tupir Hat store",
+          view_all: "View All",
+          why_1_title: "Fair & Honest Pricing",
+          why_1_desc:
+            "We keep our margins low to provide the Tupir Hat and Nawabganj community with affordable rates.",
+          why_2_title: "Direct Founder Support",
+          why_2_desc:
+            "Every message and phone call is answered directly by Md Majharul Islam for 100% personal service.",
+          why_3_title: "Expanding to Online Platform",
+          why_3_desc:
+            "Starting as a physical shop & FB community, we are building a state-of-the-art full digital store soon.",
+          catalog_header_title: "Products Catalog",
+          catalog_header_desc:
+            "Browse our latest collection. Tap any item to order instantly via WhatsApp or Facebook.",
+          how_order_badge_title: "How ordering works:",
+          how_order_badge_desc:
+            'Clicking "Order" automatically opens your WhatsApp with product name pre-written!',
+          filter_all: "All Items",
+          filter_clothing: "Clothing",
+          filter_electronics: "Electronics",
+          filter_home: "Home & Kitchen",
+          filter_cosmetics: "Cosmetics",
+          filter_groceries: "Essentials",
+          no_item_title: "No items found",
+          no_item_desc: "Try another search keyword or switch category filters.",
+          show_all_btn: "Show All Products",
+          how_page_title: "How to Order from SajMi Store",
+          how_page_desc:
+            "We operate on a direct-communication model so you get personalized customer care, real photos, and verified availability before paying.",
+          step1_title: "Choose Your Item",
+          step1_desc:
+            "Browse our catalog or visit our store in Tupir Hat. Take note of the product name or take a screenshot.",
+          step2_title: "Message or Call Us",
+          step2_desc:
+            "Tap the WhatsApp button, message our Facebook page, or directly dial 01747615357 with your required quantity.",
+          step3_title: "Confirm & Receive",
+          step3_desc:
+            "Md Majharul Islam will confirm stock and arrange onsite pickup at Tupir Hat or local delivery right to you!",
+          order_channels_title: "Available Ordering Channels",
+          channel_wa_name: "WhatsApp",
+          channel_wa_desc: "Fastest way to get real-time stock photos, videos, and delivery estimates.",
+          btn_open_wa: "Start WhatsApp Chat",
+          channel_fb_name: "Facebook Page",
+          channel_fb_desc: "Follow our page for new stock arrivals, discounts, and inbox us directly.",
+          btn_open_fb: "Visit Facebook Page",
+          channel_phone_name: "Direct Phone Call",
+          channel_phone_desc: "Speak immediately with the store owner Md Majharul Islam during store hours.",
+          btn_call_now: "Call Owner Now",
+          about_tag: "About Us",
+          about_title: "Our Story & Vision",
+          about_desc: "Building from a local shopping store in Dinajpur to a scalable digital platform.",
+          owner_name: "Md Majharul Islam",
+          owner_role: "Founder & Owner",
+          owner_loc: "Tupir Hat, Nawabganj, Dinajpur",
+          owner_words_tag: "Message from Owner",
+          owner_quote: '"Honesty, fair pricing, and serving our local community come first."',
+          owner_story_1:
+            "I established SajMi Store to give the people of Tupir Hat and Nawabganj easy access to quality lifestyle products, electronics, household essentials, and clothing without overpriced tags.",
+          owner_story_2:
+            "We started with our physical retail location and an active Facebook store presence. Every customer can deal with me directly so you know exactly what you are purchasing.",
+          roadmap_tag: "Our Future Roadmap",
+          roadmap_title: "From Local Store to Full Online Platform",
+          roadmap_desc: "Here is how SajMi Store is evolving step-by-step.",
+          phase1_badge: "Current Stage",
+          phase1_title: "Phase 1: Local & Social",
+          phase1_desc:
+            "Operating onsite at Tupir Hat, Dinajpur + order intake via WhatsApp, Facebook Page, and Direct Calls.",
+          phase2_badge: "In Progress",
+          phase2_title: "Phase 2: Digital Catalog",
+          phase2_desc:
+            "Interactive web catalog with real-time stock filters, pre-filled order message generator, and local customer database.",
+          phase3_badge: "Future Vision",
+          phase3_title: "Phase 3: Next.js E-Commerce",
+          phase3_desc:
+            "Upgrading to a high-performance Next.js web application with full online shopping cart, automated bKash/Nagad checkout, and nationwide courier integration.",
+          contact_page_tag: "Direct Contact",
+          contact_page_title: "Get in Touch with Us",
+          contact_page_desc: "Have a question or want to order? Md Majharul Islam is ready to assist you.",
+          store_info_title: "Store Information",
+          c_owner_tag: "Owner & Proprietor",
+          c_owner_val: "Md Majharul Islam",
+          c_phone_tag: "Phone / WhatsApp",
+          c_phone_time: "Available: 8:00 AM – 10:00 PM",
+          c_fb_tag: "Facebook Page",
+          c_address_tag: "Physical Store Address",
+          c_address_val: "Tupir Hat, Nawabganj, Dinajpur",
+          form_title: "Build an Order Message",
+          form_desc: "Fill out the quick details below and choose whether to send via WhatsApp or Facebook.",
+          f_name_label: "Your Full Name",
+          f_phone_label: "Your Phone Number",
+          f_addr_label: "Your Location / Village",
+          f_note_label: "Products / Order Note",
+          btn_send_wa: "Send to WhatsApp",
+          btn_send_fb: "Send to Facebook",
+          footer_desc:
+            "Your trusted local startup store in Tupir Hat, Nawabganj, Dinajpur. Friendly service, quality products, and fair prices.",
+          footer_pages_title: "Store Pages",
+          footer_order_channels: "Direct Order Via",
+          footer_future_note: "(Online checkout coming with Next.js)",
+          footer_owner_title: "Owner & Location",
+          f_owner_lbl: "Proprietor:",
+          f_loc_lbl: "Address:",
+          f_phone_lbl: "Phone:",
+          f_sub_loc: "Tupir Hat, Nawabganj, Dinajpur",
+          f_sub_future: "Scaling to Next.js in the Future",
+        },
+      };
+
+      let currentLang = localStorage.getItem("sajmi_lang") || "bn";
+      let currentCategory = "All";
+      let searchQuery = "";
+
+      // ---------------------------------------------
+      // 3. LANGUAGE TOGGLE FUNCTION
+      // ---------------------------------------------
+      function toggleLanguage() {
+        currentLang = currentLang === "bn" ? "en" : "bn";
+        localStorage.setItem("sajmi_lang", currentLang);
+        applyLanguage(currentLang);
+      }
+
+      function applyLanguage(lang) {
+        document.documentElement.lang = lang;
+
+        // Update toggle button text
+        const langLabel = document.getElementById("langLabel");
+        if (langLabel) {
+          langLabel.innerText = lang === "bn" ? "English" : "বাংলা";
+        }
+
+        // Update Search placeholder
+        const searchBox = document.getElementById("productSearch");
+        if (searchBox) {
+          searchBox.placeholder = lang === "bn" ? "পণ্যের নাম খুঁজুন..." : "Search product name...";
+        }
+
+        // Update all data-i18n elements
+        document.querySelectorAll("[data-i18n]").forEach((el) => {
+          const key = el.getAttribute("data-i18n");
+          if (translations[lang] && translations[lang][key]) {
+            el.innerText = translations[lang][key];
+          }
+        });
+
+        // Re-render product cards with the selected language
+        renderCatalog();
+        renderFeaturedHome();
+      }
+
+      // ---------------------------------------------
+      // 4. MULTIPAGE NAVIGATION (SPA ROUTING)
+      // ---------------------------------------------
+      const validPages = ["home", "products", "how-to-order", "about", "contact"];
+
+      function navigateTo(pageId) {
+        if (!validPages.includes(pageId)) pageId = "home";
+
+        document.querySelectorAll(".page-section").forEach((section) => {
+          section.classList.remove("active");
+        });
+
+        const targetSection = document.getElementById(`page-${pageId}`);
+        if (targetSection) {
+          targetSection.classList.add("active");
+        }
+
+        document.querySelectorAll(".nav-btn").forEach((btn) => {
+          btn.classList.remove("active");
+        });
+        const activeNavBtn = document.getElementById(`nav-${pageId}`);
+        if (activeNavBtn) activeNavBtn.classList.add("active");
+
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+
+      window.addEventListener("hashchange", () => {
+        const hash = window.location.hash.replace("#", "");
+        navigateTo(hash || "home");
+      });
+
+      // ---------------------------------------------
+      // 5. DARK / LIGHT MODE CONTROLLER
+      // ---------------------------------------------
+      function initTheme() {
+        const savedTheme = localStorage.getItem("sajmi_theme");
+        const prefersDark = window.matchMedia("(prefers-color-scheme: light)").matches;
+
+        if (savedTheme === "light" || (!savedTheme && prefersDark)) {
+          document.documentElement.classList.add("light");
+          updateThemeIcon(true);
+        } else {
+          document.documentElement.classList.remove("light");
+          updateThemeIcon(false);
+        }
+      }
+
+      function toggleTheme() {
+        const isDark = document.documentElement.classList.toggle("dark");
+        localStorage.setItem("sajmi_theme", isDark ? "dark" : "light");
+        updateThemeIcon(isDark);
+      }
+
+      function updateThemeIcon(isDark) {
+        const icon = document.getElementById("themeIcon");
+        if (icon) {
+          icon.className = isDark
+            ? "fas fa-sun text-amber-400 text-base"
+            : "fas fa-moon text-gray-700 text-base";
+        }
+      }
+
+      // ---------------------------------------------
+      // 6. MOBILE DRAWER MENU
+      // ---------------------------------------------
+      function toggleMobileMenu() {
+        const menu = document.getElementById("mobileMenu");
+        const icon = document.getElementById("menuIcon");
+        if (menu.classList.contains("hidden")) {
+          menu.classList.remove("hidden");
+          icon.className = "fas fa-times text-xl";
+        } else {
+          menu.classList.add("hidden");
+          icon.className = "fas fa-bars text-xl";
+        }
+      }
+
+      // ---------------------------------------------
+      // 7. CATALOG RENDERING & FILTERING
+      // ---------------------------------------------
+      function renderProductCard(p) {
+        const discount = Math.round(((p.originalPrice - p.price) / p.originalPrice) * 100);
+        const displayName = currentLang === "bn" ? p.nameBn : p.nameEn;
+        const orderText =
+          currentLang === "bn"
+            ? `হ্যালো মোঃ মাজহারুল ইসলাম, আমি সাজমি স্টোর থেকে "${displayName}" (৳${p.price}) অর্ডার করতে চাই।`
+            : `Hello Md Majharul Islam, I want to order "${displayName}" (৳${p.price}) from SajMi Store.`;
+
+        const whatsappUrl = `https://wa.me/8801747615357?text=${encodeURIComponent(orderText)}`;
+        const inStockLabel = currentLang === "bn" ? "স্টকে আছে" : "In Stock";
+        const offLabel = currentLang === "bn" ? "ছাড়" : "OFF";
+
+        return `
+        <div class="bg-white dark:bg-slate-900 rounded-3xl p-5 border border-gray-100 dark:border-slate-800 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col justify-between group">
+          <div>
+            <div class="w-full h-44 rounded-2xl bg-gradient-to-tr from-brand-50 to-amber-50 dark:from-slate-800 dark:to-slate-850 flex items-center justify-center text-brand-600 dark:text-brand-400 text-5xl relative overflow-hidden group-hover:scale-[1.02] transition-transform">
+              <i class="fas ${p.icon}"></i>
+              <span class="absolute top-3 left-3 bg-brand-600 text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full uppercase tracking-wider">
+                ${p.category}
+              </span>
+              <span class="absolute top-3 right-3 bg-red-500 text-white text-[10px] font-bold px-2 py-0.5 rounded-full">
+                -${discount}% ${offLabel}
+              </span>
+            </div>
+
+            <h4 class="font-bold text-sm text-gray-900 dark:text-white mt-4 line-clamp-2 leading-snug">
+              ${displayName}
+            </h4>
+
+            <div class="flex items-baseline gap-2 mt-2">
+              <span class="text-xl font-black text-brand-600 dark:text-brand-500">৳${p.price}</span>
+              <span class="text-xs text-gray-400 line-through">৳${p.originalPrice}</span>
+              <span class="text-[11px] text-emerald-600 dark:text-emerald-400 font-semibold ml-auto">${inStockLabel}</span>
+            </div>
+          </div>
+
+          <div class="mt-4 pt-3 border-t border-gray-100 dark:border-slate-800 grid grid-cols-2 gap-2">
+            <a href="${whatsappUrl}" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-1.5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold transition-colors">
+              <i class="fab fa-whatsapp text-sm"></i> WhatsApp
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=100088521138103" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-1.5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold transition-colors">
+              <i class="fab fa-facebook-messenger text-sm"></i> Facebook
+            </a>
+          </div>
+        </div>
+      `;
+      }
+
+      function renderCatalog() {
+        const grid = document.getElementById("catalogGrid");
+        const noResults = document.getElementById("noProductsFound");
+        if (!grid) return;
+
+        const filtered = productsData.filter((p) => {
+          const matchesCat =
+            currentCategory === "All" || p.category.toLowerCase() === currentCategory.toLowerCase();
+          const search = searchQuery.toLowerCase();
+          const matchesSearch =
+            !searchQuery ||
+            p.nameBn.toLowerCase().includes(search) ||
+            p.nameEn.toLowerCase().includes(search) ||
+            p.category.toLowerCase().includes(search);
+          return matchesCat && matchesSearch;
+        });
+
+        if (filtered.length === 0) {
+          grid.innerHTML = "";
+          noResults.classList.remove("hidden");
+        } else {
+          noResults.classList.add("hidden");
+          grid.innerHTML = filtered.map(renderProductCard).join("");
+        }
+      }
+
+      function renderFeaturedHome() {
+        const homeGrid = document.getElementById("homeFeaturedGrid");
+        if (!homeGrid) return;
+        const featured = productsData.slice(0, 4);
+        homeGrid.innerHTML = featured.map(renderProductCard).join("");
+      }
+
+      function filterCatalog(category) {
+        currentCategory = category;
+
+        document.querySelectorAll(".cat-pill").forEach((btn) => {
+          const isMatch = btn.getAttribute("data-category").toLowerCase() === category.toLowerCase();
+          if (isMatch) {
+            btn.className =
+              "cat-pill px-4 py-2 rounded-xl text-xs font-bold border border-brand-500 bg-brand-500 text-white transition-all whitespace-nowrap";
+          } else {
+            btn.className =
+              "cat-pill px-4 py-2 rounded-xl text-xs font-bold border border-gray-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-gray-700 dark:text-gray-300 hover:border-brand-500 transition-all whitespace-nowrap";
+          }
+        });
+
+        renderCatalog();
+      }
+
+      function setCategoryAndGo(cat) {
+        filterCatalog(cat);
+        navigateTo("products");
+      }
+
+      function handleSearch() {
+        searchQuery = document.getElementById("productSearch").value.trim();
+        renderCatalog();
+      }
+
+      // ---------------------------------------------
+      // 8. QUICK ORDER FORM MESSAGE BUILDER
+      // ---------------------------------------------
+      function sendQuickOrder(target) {
+        const name =
+          document.getElementById("custName").value.trim() ||
+          (currentLang === "bn" ? "একজন ক্রেতা" : "A Customer");
+        const phone = document.getElementById("custPhone").value.trim() || "N/A";
+        const address = document.getElementById("custAddress").value.trim() || "N/A";
+        const note = document.getElementById("custNote").value.trim();
+
+        if (!note) {
+          alert(
+            currentLang === "bn"
+              ? "অনুগ্রহ করে কোন পণ্যটি নিতে চান তা লিখুন!"
+              : "Please specify which product(s) you want to order!",
+          );
+          document.getElementById("custNote").focus();
+          return;
+        }
+
+        const text =
+          currentLang === "bn"
+            ? `*নতুন অর্ডার অনুসন্ধান - সাজমি স্টোর*\n\n` +
+              `👤 *ক্রেতার নাম:* ${name}\n` +
+              `📞 *মোবাইল:* ${phone}\n` +
+              `📍 *ঠিকানা:* ${address}\n\n` +
+              `🛍️ *পণ্যের বিবরণ:*\n${note}\n\n` +
+              `-- সাজমি স্টোর ওয়েবসাইট থেকে প্রেরিত --`
+            : `*New Order Inquiry - SajMi Store*\n\n` +
+              `👤 *Customer Name:* ${name}\n` +
+              `📞 *Phone:* ${phone}\n` +
+              `📍 *Address:* ${address}\n\n` +
+              `🛍️ *Order Details:*\n${note}\n\n` +
+              `-- Sent via SajMi Store Website --`;
+
+        if (target === "whatsapp") {
+          const url = `https://wa.me/8801747615357?text=${encodeURIComponent(text)}`;
+          window.open(url, "_blank");
+        } else if (target === "facebook") {
+          window.open("https://www.facebook.com/profile.php?id=100088521138103", "_blank");
+        }
+      }
+
+      // ---------------------------------------------
+      // 9. INITIALIZATION ON PAGE LOAD
+      // ---------------------------------------------
+      window.addEventListener("DOMContentLoaded", () => {
+        initTheme();
+        applyLanguage(currentLang);
+
+        const initialHash = window.location.hash.replace("#", "");
+        navigateTo(initialHash || "home");
+      });
+    </script>
+  </body>
+</html>

@@ -18,7 +18,7 @@ export default function Footer() {
               <div className="w-9 h-9 bg-brand-600 rounded-xl flex items-center justify-center text-white font-black text-xl">
                 S
               </div>
-              <span className="text-xl font-black text-white">Sajmi Store</span>
+              <span className="text-xl font-black text-white">SajMi Fashion</span>
             </div>
             <p className="text-xs text-gray-400 leading-relaxed">
               {t('footer_desc')}
@@ -145,7 +145,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-gray-800 mt-10 pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-500 gap-4">
-          <p>&copy; {new Date().getFullYear()} Sajmi Store (সাজমি স্টোর). All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} SajMi Fashion (সাজমি ফ্যাশন). All rights reserved.</p>
           <p className="flex items-center gap-2">
             <span>{t('f_sub_loc')}</span>
             <span>•</span>
@@ -156,4 +156,3 @@ export default function Footer() {
     </footer>
   );
 }
-

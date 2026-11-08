@@ -6,10 +6,10 @@ import { useLanguage } from '@/context/LanguageContext';
 import { productsData } from '@/data/products';
 import { Category } from '@/types';
 import ProductCard from '@/components/ProductCard';
-import { Search, Sparkles, MessageCircle } from 'lucide-react';
+import { Search, MessageCircle } from 'lucide-react';
 
 function ProductsCatalogContent() {
-  const { language, t } = useLanguage();
+  const { t } = useLanguage();
   const searchParams = useSearchParams();
   const initialCategory = (searchParams.get('category') as Category) || 'All';
 
@@ -25,11 +25,11 @@ function ProductsCatalogContent() {
 
   const categories: { key: Category; label: string }[] = [
     { key: 'All', label: t('cat_all') },
-    { key: 'Clothing', label: t('cat_clothing') },
-    { key: 'Electronics', label: t('cat_electronics') },
-    { key: 'Home', label: t('cat_home') },
-    { key: 'Cosmetics', label: t('cat_cosmetics') },
-    { key: 'Groceries', label: t('cat_groceries') },
+    { key: 'Men', label: t('cat_men') },
+    { key: 'Women', label: t('cat_women') },
+    { key: 'Traditional', label: t('cat_traditional') },
+    { key: 'Kids', label: t('cat_kids') },
+    { key: 'Accessories', label: t('cat_accessories') },
   ];
 
   const filteredProducts = productsData.filter((p) => {
@@ -146,4 +146,3 @@ export default function ProductsPage() {
     </Suspense>
   );
 }
-

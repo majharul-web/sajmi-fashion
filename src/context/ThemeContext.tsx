@@ -12,19 +12,17 @@ const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const [theme, setTheme] = useState<Theme>('light');
-  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     const saved = localStorage.getItem('sajmi_theme') as Theme | null;
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const initial = saved || (prefersDark ? 'dark' : 'light');
+    // Default theme is light mode
+    const initial: Theme = saved === 'dark' ? 'dark' : 'light';
     setTheme(initial);
     if (initial === 'dark') {
       document.documentElement.classList.add('dark');
     } else {
       document.documentElement.classList.remove('dark');
     }
-    setMounted(true);
   }, []);
 
   const toggleTheme = () => {
@@ -52,4 +50,3 @@ export function useTheme() {
   }
   return context;
 }
-

@@ -84,7 +84,7 @@ export default function ContactPage() {
                       rel="noopener noreferrer"
                       className="text-sm font-bold text-blue-600 hover:underline"
                     >
-                      Sajmi Store Facebook Page
+                      SajMi Fashion Facebook Page
                     </a>
                   </div>
                 </div>

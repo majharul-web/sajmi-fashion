@@ -1,40 +1,40 @@
-# Sajmi Store (সাজমি স্টোর)
+# SajMi Fashion (সাজমি ফ্যাশন)
 
-Modern, scalable, multi-page website for **Sajmi Store**, built with **Next.js 16.4.5**, **Tailwind CSS**, and **pnpm**.
+Modern, scalable, multi-page website for **SajMi Fashion**, built with **Next.js 16.4.5**, **Tailwind CSS**, and **TypeScript**.
 
 ## 📌 Project Overview
-- **Owner:** Md Majharul Islam
+- **Brand:** SajMi Fashion (সাজমি ফ্যাশন)
+- **Owner & Proprietor:** Md Majharul Islam
 - **Phone / WhatsApp:** 01747615357
-- **Store Location:** Tupir Hat, Nawabganj, Dinajpur, Bangladesh
-- **Facebook Page:** [Sajmi Store](https://www.facebook.com/profile.php?id=100088521138103)
-- **Order Model:** Dedicated direct order via WhatsApp, Facebook, and Phone Call (No complex online cart / checkout).
+- **Physical Outlet:** Tupir Hat, Nawabganj, Dinajpur, Bangladesh (টুপির হাট, নবাবগঞ্জ, দিনাজপুর)
+- **Facebook Page:** [SajMi Fashion](https://www.facebook.com/profile.php?id=100088521138103)
+- **Order Model:** Dedicated direct orders via WhatsApp, Facebook, and Phone Call with personalized sizing & fabric confirmation.
 
 ## 🚀 Tech Stack
 - **Framework:** Next.js 16.4.5 (Turbopack, App Router)
 - **Styling:** Tailwind CSS + Autoprefixer
-- **Package Manager:** pnpm
-- **Languages:** TypeScript, React 19 (LTS)
+- **Languages:** TypeScript, React 19
 - **Icons:** Lucide React
 - **Features:** 
-  - Dual language support (বাংলা / English) with instant toggle and `localStorage` persistence
-  - Dark Mode and Light Mode with system theme detection
-  - Fully responsive on mobile, tablet, and desktop
+  - Dual language support (বাংলা default & English) with instant toggle and `localStorage` persistence
+  - Light Mode as default theme with toggleable Dark Mode support
+  - Fashion catalog with categories (Men, Women, Kids, Panjabi & Traditional, Accessories)
+  - Real-time search and category filtering
   - Pre-formatted WhatsApp order message generator
-  - Dynamic product catalog with category filter and search
+  - Fully responsive on mobile, tablet, and desktop
 
 ## 🛠️ Development & Build
 
 ```bash
 # Install dependencies
-pnpm install
+npm install # or pnpm install
 
 # Start development server
-pnpm dev
+npm run dev
 
 # Build for production
-pnpm build
+npm run build
 
 # Start production server
-pnpm start
+npm run start
 ```
-

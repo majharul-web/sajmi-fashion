@@ -7,16 +7,12 @@ import {
   Shirt,
   Sparkles,
   Smile,
-  Headphones,
-  BatteryCharging,
-  Cable,
-  Utensils,
-  Droplet,
-  Coffee,
-  Heart,
-  ShoppingBag,
-  Flashlight,
-  Package,
+  Gem,
+  Crown,
+  Layers,
+  Watch,
+  Wallet,
+  Palette,
   MessageCircle,
 } from 'lucide-react';
 
@@ -33,8 +29,8 @@ export default function ProductCard({ product }: ProductCardProps) {
 
   const orderMessage =
     language === 'bn'
-      ? `হ্যালো মোঃ মাজহারুল ইসলাম, আমি সাজমি স্টোর থেকে "${displayName}" (৳${product.price}) অর্ডার করতে চাই।`
-      : `Hello Md Majharul Islam, I want to order "${displayName}" (৳${product.price}) from Sajmi Store.`;
+      ? `হ্যালো মোঃ মাজহারুল ইসলাম, আমি সাজমি ফ্যাশন থেকে "${displayName}" (৳${product.price}) অর্ডার করতে চাই।`
+      : `Hello Md Majharul Islam, I want to order "${displayName}" (৳${product.price}) from SajMi Fashion.`;
 
   const whatsappUrl = `https://wa.me/8801747615357?text=${encodeURIComponent(orderMessage)}`;
   const fbUrl = 'https://www.facebook.com/profile.php?id=100088521138103';
@@ -48,26 +44,20 @@ export default function ProductCard({ product }: ProductCardProps) {
         return <Sparkles {...props} />;
       case 'smile':
         return <Smile {...props} />;
-      case 'headphones':
-        return <Headphones {...props} />;
-      case 'battery-charging':
-        return <BatteryCharging {...props} />;
-      case 'cable':
-        return <Cable {...props} />;
-      case 'utensils':
-        return <Utensils {...props} />;
-      case 'droplet':
-        return <Droplet {...props} />;
-      case 'coffee':
-        return <Coffee {...props} />;
-      case 'heart':
-        return <Heart {...props} />;
-      case 'shopping-bag':
-        return <ShoppingBag {...props} />;
-      case 'flashlight':
-        return <Flashlight {...props} />;
+      case 'gem':
+        return <Gem {...props} />;
+      case 'crown':
+        return <Crown {...props} />;
+      case 'layers':
+        return <Layers {...props} />;
+      case 'watch':
+        return <Watch {...props} />;
+      case 'wallet':
+        return <Wallet {...props} />;
+      case 'palette':
+        return <Palette {...props} />;
       default:
-        return <Package {...props} />;
+        return <Shirt {...props} />;
     }
   };
 
@@ -126,4 +116,3 @@ export default function ProductCard({ product }: ProductCardProps) {
     </div>
   );
 }
-
