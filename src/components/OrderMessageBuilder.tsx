@@ -15,8 +15,8 @@ export default function OrderMessageBuilder() {
     if (!note.trim()) {
       alert(
         language === 'bn'
-          ? 'অনুগ্রহ করে আপনি যে পণ্যগুলো নিতে চান তা লিখুন!'
-          : 'Please write down which product(s) or items you want to order!'
+          ? 'অনুগ্রহ করে আপনি যে পোশাক বা পণ্যটি নিতে চান তা লিখুন!'
+          : 'Please specify which clothing or fashion item(s) you want to order!'
       );
       return;
     }
@@ -27,18 +27,18 @@ export default function OrderMessageBuilder() {
 
     const text =
       language === 'bn'
-        ? `*নতুন অর্ডার অনুসন্ধান - সাজমি স্টোর*\n\n` +
+        ? `*নতুন অর্ডার অনুসন্ধান - সাজমি ফ্যাশন*\n\n` +
           `👤 *ক্রেতার নাম:* ${customerName}\n` +
           `📞 *মোবাইল:* ${customerPhone}\n` +
           `📍 *ঠিকানা:* ${customerAddress}\n\n` +
-          `🛍️ *পণ্যের বিবরণ:* \n${note}\n\n` +
-          `-- সাজমি স্টোর ওয়েবসাইট (Next.js 16.4.5) থেকে প্রেরিত --`
-        : `*New Order Inquiry - Sajmi Store*\n\n` +
+          `🛍️ *অর্ডারের বিবরণ (পোশাক, সাইজ ও কালার):* \n${note}\n\n` +
+          `-- সাজমি ফ্যাশন ওয়েবসাইট থেকে প্রেরিত --`
+        : `*New Fashion Order Inquiry - SajMi Fashion*\n\n` +
           `👤 *Customer Name:* ${customerName}\n` +
           `📞 *Phone:* ${customerPhone}\n` +
           `📍 *Address:* ${customerAddress}\n\n` +
-          `🛍️ *Order Details:* \n${note}\n\n` +
-          `-- Sent via Sajmi Store Website (Next.js 16.4.5) --`;
+          `🛍️ *Order Details (Garments, Size & Color):* \n${note}\n\n` +
+          `-- Sent via SajMi Fashion Website --`;
 
     if (target === 'whatsapp') {
       const url = `https://wa.me/8801747615357?text=${encodeURIComponent(text)}`;
@@ -92,7 +92,7 @@ export default function OrderMessageBuilder() {
               type="text"
               value={address}
               onChange={(e) => setAddress(e.target.value)}
-              placeholder={language === 'bn' ? 'যেমন: নবাবগঞ্জ, দিনাজপুর' : 'e.g. Nawabganj, Dinajpur'}
+              placeholder={language === 'bn' ? 'যেমন: টুপির হাট, নবাবগঞ্জ, দিনাজপুর' : 'e.g. Tupir Hat, Nawabganj, Dinajpur'}
               className="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-slate-800 bg-gray-50 dark:bg-slate-800 text-xs focus:ring-2 focus:ring-brand-500 focus:outline-none"
             />
           </div>
@@ -108,8 +108,8 @@ export default function OrderMessageBuilder() {
             onChange={(e) => setNote(e.target.value)}
             placeholder={
               language === 'bn'
-                ? 'পণ্যের নাম, রঙ, পরিমাণ বা সাইজ উল্লেখ করুন...'
-                : 'Mention item names, quantity, or specific colors you need...'
+                ? 'পোশাকের নাম, সাইজ (M/L/XL), রঙ, পরিমাণ উল্লেখ করুন...'
+                : 'Mention item names, preferred sizes (M/L/XL), colors, or quantity...'
             }
             className="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-slate-800 bg-gray-50 dark:bg-slate-800 text-xs focus:ring-2 focus:ring-brand-500 focus:outline-none resize-none"
           />
@@ -135,4 +135,3 @@ export default function OrderMessageBuilder() {
     </div>
   );
 }
-

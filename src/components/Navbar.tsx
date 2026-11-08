@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useLanguage } from '@/context/LanguageContext';
 import { useTheme } from '@/context/ThemeContext';
-import { Sun, Moon, Languages, Menu, X, MessageCircle, Phone, ShoppingBag } from 'lucide-react';
+import { Sun, Moon, Languages, Menu, X, MessageCircle } from 'lucide-react';
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -21,6 +21,13 @@ export default function Navbar() {
     { href: '/contact', label: t('nav_contact') },
   ];
 
+  const waOrderText =
+    language === 'bn'
+      ? 'হ্যালো মোঃ মাজহারুল ইসলাম, আমি সাজমি ফ্যাশন থেকে অর্ডার করতে চাই।'
+      : 'Hello Md Majharul Islam, I want to order from SajMi Fashion.';
+
+  const waUrl = `https://wa.me/8801747615357?text=${encodeURIComponent(waOrderText)}`;
+
   return (
     <header className="sticky top-0 z-40 bg-white/90 dark:bg-slate-900/95 backdrop-blur-md border-b border-gray-200 dark:border-slate-800 shadow-sm transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -33,10 +40,10 @@ export default function Navbar() {
             <div>
               <div className="flex items-center gap-1.5">
                 <span className="text-2xl font-black tracking-tight text-gray-900 dark:text-white">
-                  Sajmi
+                  SajMi
                 </span>
                 <span className="text-2xl font-black tracking-tight text-brand-600 dark:text-brand-500">
-                  {language === 'bn' ? 'স্টোর' : 'Store'}
+                  {t('brand_suffix')}
                 </span>
               </div>
               <p className="text-[11px] text-gray-500 dark:text-gray-400 font-medium -mt-1">
@@ -77,7 +84,7 @@ export default function Navbar() {
               <span>{language === 'bn' ? 'English' : 'বাংলা'}</span>
             </button>
 
-            {/* Dark Mode Toggle */}
+            {/* Dark/Light Mode Toggle */}
             <button
               onClick={toggleTheme}
               aria-label="Toggle Theme"
@@ -92,7 +99,7 @@ export default function Navbar() {
 
             {/* Direct WhatsApp Order CTA */}
             <a
-              href="https://wa.me/8801747615357?text=Hello%20Md%20Majharul%20Islam%2C%20I%20want%20to%20order%20from%20Sajmi%20Store"
+              href={waUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="hidden sm:inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold px-3.5 py-2.5 rounded-xl shadow-md shadow-emerald-600/20 transition-all hover:-translate-y-0.5"
@@ -128,7 +135,7 @@ export default function Navbar() {
           ))}
           <div className="pt-3 border-t border-gray-200 dark:border-slate-800 grid grid-cols-2 gap-2">
             <a
-              href="https://wa.me/8801747615357"
+              href={waUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center gap-2 bg-emerald-600 text-white text-xs font-bold py-2.5 rounded-lg"
@@ -149,4 +156,3 @@ export default function Navbar() {
     </header>
   );
 }
-

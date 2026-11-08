@@ -8,9 +8,9 @@ import Footer from '@/components/Footer';
 import FloatingCTA from '@/components/FloatingCTA';
 
 export const metadata: Metadata = {
-  title: 'Sajmi Store | সাজমি স্টোর – টুপরির হাট, নবাবগঞ্জ, দিনাজপুর',
+  title: 'SajMi Fashion | সাজমি ফ্যাশন – টুপির হাট, নবাবগঞ্জ, দিনাজপুর',
   description:
-    'Sajmi Store - Quality shopping at Tupir Hat and via Facebook & WhatsApp. Owned by Md Majharul Islam.',
+    'SajMi Fashion - Trendy clothing & stylish apparel collection at Tupir Hat, Nawabganj. Owned by Md Majharul Islam.',
 };
 
 export default function RootLayout({
@@ -42,4 +42,3 @@ export default function RootLayout({
     </html>
   );
 }
-

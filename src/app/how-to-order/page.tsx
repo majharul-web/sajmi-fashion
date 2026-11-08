@@ -2,10 +2,16 @@
 
 import React from 'react';
 import { useLanguage } from '@/context/LanguageContext';
-import { MessageCircle, Phone, ArrowRight, ShieldCheck, CheckCircle2 } from 'lucide-react';
+import { MessageCircle, Phone } from 'lucide-react';
 
 export default function HowToOrderPage() {
-  const { t } = useLanguage();
+  const { language, t } = useLanguage();
+
+  const waOrderText =
+    language === 'bn'
+      ? 'হ্যালো মোঃ মাজহারুল ইসলাম, আমি সাজমি ফ্যাশন থেকে অর্ডার করতে চাই।'
+      : 'Hello Md Majharul Islam, I want to order from SajMi Fashion.';
+  const waUrl = `https://wa.me/8801747615357?text=${encodeURIComponent(waOrderText)}`;
 
   return (
     <div>
@@ -85,7 +91,7 @@ export default function HowToOrderPage() {
                 </p>
               </div>
               <a
-                href="https://wa.me/8801747615357?text=Hello%20Md%20Majharul%20Islam%2C%20I%20want%20to%20order"
+                href={waUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-6 w-full text-center py-3 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold rounded-xl transition-colors block"
@@ -107,7 +113,7 @@ export default function HowToOrderPage() {
                   {t('channel_fb_desc')}
                 </p>
                 <p className="text-sm font-black text-blue-700 dark:text-blue-400 mt-4">
-                  Sajmi Store Facebook
+                  SajMi Fashion Facebook
                 </p>
               </div>
               <a
@@ -149,4 +155,3 @@ export default function HowToOrderPage() {
     </div>
   );
 }
-

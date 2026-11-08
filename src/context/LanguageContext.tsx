@@ -14,14 +14,14 @@ interface LanguageContextType {
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
+  // Default language is Bangla ('bn')
   const [language, setLanguageState] = useState<Language>('bn');
 
   useEffect(() => {
     const saved = localStorage.getItem('sajmi_lang') as Language | null;
-    if (saved === 'bn' || saved === 'en') {
-      setLanguageState(saved);
-      document.documentElement.lang = saved;
-    }
+    const initial: Language = saved === 'en' ? 'en' : 'bn';
+    setLanguageState(initial);
+    document.documentElement.lang = initial;
   }, []);
 
   const setLanguage = (lang: Language) => {
@@ -31,7 +31,7 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
   };
 
   const toggleLanguage = () => {
-    const next = language === 'bn' ? 'en' : 'bn';
+    const next: Language = language === 'bn' ? 'en' : 'bn';
     setLanguage(next);
   };
 
@@ -54,4 +54,3 @@ export function useLanguage() {
   }
   return context;
 }
-
