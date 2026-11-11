@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 80" width="360" height="80">
+  <defs>
+    <linearGradient id="circleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F97316;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ea6a0a;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#F97316;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fb923c;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background: transparent -->
+
+  <!-- Orange circle badge with S -->
+  <circle cx="40" cy="40" r="34" fill="url(#circleGrad)" />
+  <!-- Decorative inner ring -->
+  <circle cx="40" cy="40" r="29" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="1.2" />
+
+  <!-- S letter - elegant stylized -->
+  <text x="40" y="53"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="40"
+    font-weight="700"
+    fill="white"
+    text-anchor="middle"
+    letter-spacing="-1">S</text>
+
+  <!-- Thin decorative line under S -->
+  <line x1="27" y1="58" x2="53" y2="58" stroke="rgba(255,255,255,0.5)" stroke-width="1" />
+
+  <!-- Brand Name: SajMi -->
+  <text x="88" y="36"
+    font-family="'Segoe UI', Arial, sans-serif"
+    font-size="26"
+    font-weight="800"
+    fill="#1a1a2e"
+    letter-spacing="0.5">SajMi</text>
+
+  <!-- Brand Name: Fashion in orange -->
+  <text x="88" y="60"
+    font-family="'Segoe UI', Arial, sans-serif"
+    font-size="18"
+    font-weight="400"
+    fill="#F97316"
+    letter-spacing="4">FASHION</text>
+
+  <!-- Decorative dot accent -->
+  <circle cx="197" cy="60" r="2.5" fill="#F97316" />
+  <line x1="88" y1="66" x2="192" y2="66" stroke="#F97316" stroke-width="1" opacity="0.4" />
+
+  <!-- Small tagline -->
+  <text x="88" y="76"
+    font-family="'Segoe UI', Arial, sans-serif"
+    font-size="8.5"
+    fill="#888"
+    letter-spacing="1.5">সাজমি ফ্যাশন</text>
+</svg>
+
