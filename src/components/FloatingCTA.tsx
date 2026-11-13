@@ -1,24 +1,23 @@
-'use client';
+"use client";
 
-import React from 'react';
-import { MessageCircle } from 'lucide-react';
+import { MessageCircle } from "lucide-react";
 
 export default function FloatingCTA() {
   return (
     <>
       {/* Floating WhatsApp CTA */}
       <a
-        href="https://wa.me/8801747615357?text=Hello%20Md%20Majharul%20Islam%2C%20I%20want%20to%20order%20from%20SajMi%20Fashion"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="fixed bottom-6 right-6 z-50 w-14 h-14 bg-emerald-500 hover:bg-emerald-600 text-white rounded-full flex items-center justify-center text-2xl pulse-float shadow-xl transition-transform"
-        aria-label="Order on WhatsApp"
+        href='https://wa.me/8801747615357?text=Hello%20Md%20Majharul%20Islam%2C%20I%20want%20to%20order%20from%20SajMi%20Fashion'
+        target='_blank'
+        rel='noopener noreferrer'
+        className='fixed bottom-6 right-6 z-50 w-14 h-14 bg-emerald-500 hover:bg-emerald-600 text-white rounded-full flex items-center justify-center text-2xl pulse-float shadow-xl transition-transform'
+        aria-label='Order on WhatsApp'
       >
-        <MessageCircle className="w-7 h-7" />
+        <MessageCircle className='w-7 h-7' />
       </a>
 
       {/* Floating Facebook Page Messenger */}
-      <a
+      {/* <a
         href="https://www.facebook.com/profile.php?id=100088521138103"
         target="_blank"
         rel="noopener noreferrer"
@@ -26,7 +25,7 @@ export default function FloatingCTA() {
         aria-label="Message on Facebook"
       >
         FB
-      </a>
+      </a> */}
     </>
   );
 }
